@@ -303,6 +303,9 @@ After assembling hardware, you'll need to:
    git clone https://github.com/jakobneri/Chippin-In-Pi.git
    cd Chippin-In-Pi
    npm install
+   
+   # Optional: Make CLI globally available
+   sudo npm link
    ```
 
 3. **Configure Hardware**
@@ -312,12 +315,12 @@ After assembling hardware, you'll need to:
 
 4. **Start the Web Interface**
    ```bash
-   # Start the Chippin-In-Pi server (after running npm link)
+   # If you ran 'npm link', use:
    chippin server start
    
-   # Alternative methods:
-   # node cli/index.js server start
-   # npm run server
+   # Otherwise, use one of these:
+   node cli/index.js server start
+   npm run server
    
    # Server runs on port 3000
    # Access from another device: http://chippin.local:3000
