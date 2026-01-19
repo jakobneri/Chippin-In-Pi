@@ -18,7 +18,7 @@ This guide provides a comprehensive shopping list with prices from German retail
 
 ### Core Components (for Raspberry Pi 5)
 
-#### Option 1: Ultra-Compact Budget Setup (~€55-75)
+#### Option 1: Ultra-Compact Budget Setup (~€59-81)
 
 | Component | Model | Price (€) | Retailer | Notes |
 |-----------|-------|-----------|----------|-------|
@@ -31,7 +31,7 @@ This guide provides a comprehensive shopping list with prices from German retail
 **Interface**: Web-based (connect via WiFi)
 **Compact Factor**: No USB hub needed - use Pi 5's built-in ports
 
-#### Option 2: Compact Performance Setup (~€110-145)
+#### Option 2: Compact Performance Setup (~€98-135)
 
 | Component | Model | Price (€) | Retailer | Notes |
 |-----------|-------|-----------|----------|-------|
@@ -46,7 +46,7 @@ This guide provides a comprehensive shopping list with prices from German retail
 **Interface**: Web-based (connect via WiFi)
 **Compact Factor**: No USB hub - direct WiFi adapter connection to Pi 5 ports
 
-#### Option 3: Compact Premium with UPS (~€150-200)
+#### Option 3: Compact Premium with UPS (~€138-182)
 
 | Component | Model | Price (€) | Retailer | Notes |
 |-----------|-------|----------|-------|-------|
@@ -356,7 +356,6 @@ After assembling hardware, you'll need to:
 
 3. **Configure Hardware**
    - Enable I2C in raspi-config (required for Sense HAT)
-   - Install Sense HAT library: `sudo apt install sense-hat python3-sense-hat`
    - Set up WiFi adapter drivers and monitor mode support
    - Install wireless security tools (aircrack-ng, hostapd, dnsmasq, etc.)
    - Set up RF module software (rtl-sdr, hackrf, etc.) if using
