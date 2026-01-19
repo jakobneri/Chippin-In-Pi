@@ -39,7 +39,7 @@ router.post('/execute/:toolId', (req, res) => {
   const { toolId } = req.params;
   
   res.json({
-    message: `Tool execution not yet implemented`,
+    message: `Tool execution has not yet been implemented`,
     toolId,
     status: 'planned'
   });
