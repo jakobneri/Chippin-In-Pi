@@ -1,0 +1,48 @@
+{
+  "name": "chippin-in-pi",
+  "version": "1.0.0",
+  "description": "Raspberry Pi comprehensive hacking and security testing tool",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "chippin": "./cli/index.js"
+  },
+  "scripts": {
+    "dev": "node cli/index.js",
+    "server": "node server/index.js",
+    "server:dev": "nodemon server/index.js",
+    "frontend:dev": "cd frontend && npm run dev",
+    "build": "npm run build:server && npm run build:frontend",
+    "build:server": "node --experimental-strip-types server/index.js",
+    "build:frontend": "cd frontend && npm run build",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "echo \"Tests not yet implemented\" && exit 0",
+    "upgrade": "npm update"
+  },
+  "keywords": [
+    "raspberry-pi",
+    "hacking",
+    "security",
+    "penetration-testing",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "inquirer": "^12.0.1",
+    "chalk": "^5.4.1",
+    "ora": "^8.1.1",
+    "express": "^4.21.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "prettier": "^3.4.2"
+  }
+}
