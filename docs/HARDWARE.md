@@ -367,7 +367,7 @@ After assembling hardware, you'll need to:
    sudo apt install hcxtools hcxdumptool
    ```
 
-4. **Start the Web Interface**
+5. **Start the Web Interface**
    ```bash
    # If you ran 'npm link', use:
    chippin server start
@@ -381,7 +381,7 @@ After assembling hardware, you'll need to:
    # Or use IP address: http://192.168.x.x:3000
    ```
 
-5. **Access from Your Device**
+6. **Access from Your Device**
    - Connect smartphone/laptop to same WiFi as Pi
    - Open web browser
    - Navigate to `http://chippin.local:3000`
