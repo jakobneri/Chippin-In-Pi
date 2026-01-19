@@ -295,7 +295,8 @@ After assembling hardware, you'll need to:
    # Download Raspberry Pi Imager
    # Flash Raspberry Pi OS Lite (no desktop needed for headless)
    # Enable SSH and WiFi during setup
-   # Set hostname to "chippin" for easy access
+   # Set hostname to "chippin" in Imager advanced options (Ctrl+Shift+X)
+   #   or later via 'sudo raspi-config' -> System Options -> Hostname
    ```
 
 2. **Install Chippin-In-Pi**
@@ -304,7 +305,8 @@ After assembling hardware, you'll need to:
    cd Chippin-In-Pi
    npm install
    
-   # Optional: Make CLI globally available
+   # Optional: Make CLI globally available as 'chippin' command
+   # (requires 'bin' entry in package.json)
    sudo npm link
    ```
 
