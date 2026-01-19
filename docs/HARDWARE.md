@@ -76,10 +76,10 @@ These modules extend wireless capabilities for security testing:
 | **Alfa AWUS036ACH** | Realtek RTL8812AU | €45-60 | Amazon.de | Dual-band, monitor mode, packet injection |
 | **Alfa AWUS036ACHM** | MediaTek MT7612U | €55-70 | Amazon.de | Better monitor mode, dual-band |
 | **Alfa AWUS036ACM** | MediaTek MT7612U | €50-65 | Amazon.de | Long-range, monitor mode |
-| **TP-Link TL-WN722N v1** | Atheros AR9271 | €15-25 | eBay.de | Budget option (v1 ONLY! v2/v3 lack monitor mode) |
+| **TP-Link TL-WN722N v1** | Atheros AR9271 | €15-25 | eBay.de | Budget (v1 ONLY! Check FCC ID: TE7WN722NV1) |
 | **Panda PAU09 N600** | Ralink RT5572 | €25-35 | Amazon.de | Dual-band, good compatibility |
-| **WiFi Pineapple Nano** | Complete kit | €100-120 | Hak5 (ships to DE) | Ready-to-use pentest platform |
-| **WiFi Pineapple Mark VII** | Complete kit | €200-250 | Hak5 (ships to DE) | Professional WiFi auditing |
+| **WiFi Pineapple Nano** | Complete kit | €100-120 | Hak5 (ships to DE) | Ready-to-use (may have import fees) |
+| **WiFi Pineapple Mark VII** | Complete kit | €200-250 | Hak5 (ships to DE) | Professional (may have import fees) |
 
 **Recommended for Pi 5**: Alfa AWUS036ACH or AWUS036ACHM (excellent Linux support, powerful)
 
@@ -435,15 +435,21 @@ sudo apt install bettercap
 # Install Aircrack-ng suite (already installed in step 4)
 sudo apt install aircrack-ng
 
-# Install Kismet
-wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo apt-key add -
-echo 'deb https://www.kismetwireless.net/repos/apt/release/buster buster main' | sudo tee /etc/apt/sources.list.d/kismet.list
+# Install Kismet (modern method)
+wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/kismet.gpg
+echo 'deb https://www.kismetwireless.net/repos/apt/release/bullseye bullseye main' | sudo tee /etc/apt/sources.list.d/kismet.list
 sudo apt update
 sudo apt install kismet
 
-# For Wifiphisher and Fluxion, install from GitHub
-# git clone https://github.com/wifiphisher/wifiphisher
-# git clone https://github.com/FluxionNetwork/fluxion
+# For Wifiphisher - install from source
+git clone https://github.com/wifiphisher/wifiphisher
+cd wifiphisher
+sudo python3 setup.py install
+
+# For Fluxion - install from source
+git clone https://github.com/FluxionNetwork/fluxion
+cd fluxion
+# Follow repository instructions for dependencies
 ```
 
 ### Dual WiFi Adapter Setup
