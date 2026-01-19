@@ -201,7 +201,7 @@ These modules extend wireless capabilities for security testing:
 
 **Perfect for**: WiFi + RF testing with integrated WiFi HAT, compact, versatile
 
-- **Waveshare SX1262 LoRa HAT** or **ESP32 WiFi HAT** - €15-25 - **GPIO-based wireless**
+- **Waveshare SX1262 LoRa HAT** or **ESP32 WiFi HAT** - €12-30 - **GPIO-based wireless**
 - **Simple LED indicators** (3x LEDs: red/yellow/green) - €2-5
 - Anker PowerCore 20000mAh PD - €35-45
 - Samsung PRO 64GB SD card - €12-18
@@ -386,13 +386,9 @@ For compact RGB status display, use **NeoPixel or Blinkt!**:
 
 3. **Install WiFi HAT (if using Config B)**
    - Align HAT with GPIO pins (Waveshare SX1262 or ESP32 HAT)
-   - Ensure no GPIO conflict with LED connections
+   - **Check GPIO conflicts**: Waveshare SX1262 uses SPI (GPIO 7-11), ESP32 HAT uses UART (GPIO 14-15)
+   - Simple LEDs on GPIO 17, 27, 22 are compatible (no conflict)
    - Secure with standoffs
-
-4. **Power Setup**
-   - For maximum compactness: Use compact power bank (10000-20000mAh)
-   - For UPS functionality: Use PiSugar 3 Plus (integrated solution)
-   - Use short USB-C cables (15-30cm) to minimize bulk
 
 4. **Power Setup**
    - For maximum compactness: Use compact power bank (10000-20000mAh)
