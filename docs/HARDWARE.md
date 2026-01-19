@@ -212,7 +212,7 @@ These modules extend wireless capabilities for security testing:
 - PiSugar 3 Plus battery (UPS functionality)
 - 512GB NVMe SSD (fast packet storage)
 - **WiFi Pineapple Mark VII** (~€225) - **Professional WiFi auditing platform**
-- **Or: 2x Alfa AWUS036ACHM** (~€120) - **If building custom solution**
+- **Or: 2x Alfa AWUS036ACHM** (~€110-140) - **If building custom solution**
 - **HackRF One** (~€325) - **Full-duplex SDR, TX/RX**
 - **Ubertooth One** (~€135) - **Bluetooth analysis**
 - **Yard Stick One** (~€110) - **Sub-1GHz attacks**
@@ -418,17 +418,32 @@ With the right WiFi adapters (like Alfa AWUS036ACH/ACHM), your Pi 5 becomes a po
 - **Bettercap**: Swiss army knife for network attacks
 - **Kismet**: Wireless network detector
 
-**Installation commands:**
+**Installation options:**
 
 ```bash
-# Install Bettercap (recommended)
+# Option 1: Use Kali Linux for Raspberry Pi (RECOMMENDED)
+# All tools come pre-installed and properly configured
+# Download from: https://www.kali.org/get-kali/#kali-arm
+
+# Option 2: Install on Raspberry Pi OS
+# Some tools may need additional dependencies or source installation
+
+# Install Bettercap
+sudo apt update
 sudo apt install bettercap
 
-# Install Wifiphisher
-sudo apt install wifiphisher
+# Install Aircrack-ng suite (already installed in step 4)
+sudo apt install aircrack-ng
 
-# For complete security toolkit, use Kali Linux for Raspberry Pi
-# (includes all tools pre-installed)
+# Install Kismet
+wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo apt-key add -
+echo 'deb https://www.kismetwireless.net/repos/apt/release/buster buster main' | sudo tee /etc/apt/sources.list.d/kismet.list
+sudo apt update
+sudo apt install kismet
+
+# For Wifiphisher and Fluxion, install from GitHub
+# git clone https://github.com/wifiphisher/wifiphisher
+# git clone https://github.com/FluxionNetwork/fluxion
 ```
 
 ### Dual WiFi Adapter Setup
