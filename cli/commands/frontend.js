@@ -7,7 +7,8 @@ import { exec } from 'child_process';
 
 const execAsync = promisify(exec);
 
-const frontendCommands = new Command('frontend');
+const frontendCommands = new Command('frontend')
+  .description('Manage the frontend application');
 
 frontendCommands
   .command('start')

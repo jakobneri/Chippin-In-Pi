@@ -2,7 +2,8 @@ import { Command } from 'commander';
 import chalk from 'chalk';
 import inquirer from 'inquirer';
 
-const toolsCommands = new Command('tools');
+const toolsCommands = new Command('tools')
+  .description('Security and hacking tools');
 
 toolsCommands
   .command('list')

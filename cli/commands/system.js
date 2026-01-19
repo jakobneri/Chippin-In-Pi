@@ -7,7 +7,8 @@ import os from 'os';
 
 const execAsync = promisify(exec);
 
-const systemCommands = new Command('system');
+const systemCommands = new Command('system')
+  .description('System information and diagnostics');
 
 systemCommands
   .command('info')

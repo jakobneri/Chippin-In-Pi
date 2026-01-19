@@ -6,7 +6,8 @@ import { promisify } from 'util';
 
 const execAsync = promisify(exec);
 
-const serverCommands = new Command('server');
+const serverCommands = new Command('server')
+  .description('Manage the backend server');
 
 serverCommands
   .command('start')

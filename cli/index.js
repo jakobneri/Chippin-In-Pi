@@ -14,29 +14,11 @@ program
   .description('Chippin-In-Pi: Raspberry Pi comprehensive hacking and security testing tool')
   .version('1.0.0');
 
-// Server management commands
-program
-  .command('server')
-  .description('Manage the backend server')
-  .addCommand(serverCommands);
-
-// Frontend management commands
-program
-  .command('frontend')
-  .description('Manage the frontend application')
-  .addCommand(frontendCommands);
-
-// System information and status commands
-program
-  .command('system')
-  .description('System information and diagnostics')
-  .addCommand(systemCommands);
-
-// Security tools commands
-program
-  .command('tools')
-  .description('Security and hacking tools')
-  .addCommand(toolsCommands);
+// Add command groups
+program.addCommand(serverCommands);
+program.addCommand(frontendCommands);
+program.addCommand(systemCommands);
+program.addCommand(toolsCommands);
 
 // Interactive mode
 program
