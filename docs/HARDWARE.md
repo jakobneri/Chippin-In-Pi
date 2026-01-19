@@ -18,7 +18,7 @@ This guide provides a comprehensive shopping list with prices from German retail
 
 ### Core Components (for Raspberry Pi 5)
 
-#### Option 1: Budget-Friendly Setup (~€60-90)
+#### Option 1: Budget-Friendly Setup (~€70-95)
 
 | Component | Model | Price (€) | Retailer | Notes |
 |-----------|-------|-----------|----------|-------|
@@ -32,7 +32,7 @@ This guide provides a comprehensive shopping list with prices from German retail
 **Total: ~€70-95**
 **Interface**: Web-based (connect via WiFi)
 
-#### Option 2: Balanced Setup (~€115-150)
+#### Option 2: Balanced Setup (~€135-190)
 
 | Component | Model | Price (€) | Retailer | Notes |
 |-----------|-------|-----------|----------|-------|
