@@ -16,7 +16,7 @@ This guide provides a comprehensive shopping list with prices from German retail
 
 ### Core Components
 
-#### Option 1: Budget-Friendly Setup (~€75-100)
+#### Option 1: Budget-Friendly Setup (~€80-110)
 
 | Component | Model | Price (€) | Retailer | Notes |
 |-----------|-------|-----------|----------|-------|
@@ -32,7 +32,7 @@ This guide provides a comprehensive shopping list with prices from German retail
 **Total: ~€79-107**
 **Interface**: Web-based (connect via WiFi)
 
-#### Option 2: Performance Setup (~€160-210)
+#### Option 2: Performance Setup (~€180-240)
 
 | Component | Model | Price (€) | Retailer | Notes |
 |-----------|-------|-----------|----------|-------|
@@ -48,7 +48,7 @@ This guide provides a comprehensive shopping list with prices from German retail
 **Total: ~€178-236**
 **Interface**: Web-based (connect via WiFi)
 
-#### Option 3: Premium Portable Setup (~€270-365)
+#### Option 3: Premium Portable Setup (~€275-365)
 
 | Component | Model | Price (€) | Retailer | Notes |
 |-----------|-------|-----------|----------|-------|
@@ -312,16 +312,17 @@ After assembling hardware, you'll need to:
 
 4. **Start the Web Interface**
    ```bash
-   # Start the Chippin-In-Pi server
+   # Start the Chippin-In-Pi server (after running npm link)
    chippin server start
-   # Or use: node cli/index.js server start
+   
+   # Alternative methods:
+   # node cli/index.js server start
+   # npm run server
    
    # Server runs on port 3000
    # Access from another device: http://chippin.local:3000
    # Or use IP address: http://192.168.x.x:3000
    ```
-   
-   *Note: The `chippin` command is available after running `npm link` during installation.*
 
 5. **Access from Your Device**
    - Connect smartphone/laptop to same WiFi as Pi
