@@ -2,6 +2,22 @@
 
 This guide will help you get started with Chippin-In-Pi on your Raspberry Pi or development machine.
 
+## Prerequisites
+
+### Hardware
+
+📋 **Need hardware for your build?** See the [Hardware Shopping List](HARDWARE.md) for:
+- Complete parts lists with prices (German retailers)
+- Portable, battery-powered configurations
+- WiFi/Bluetooth/RF modules for wireless testing
+- Budget-friendly and premium options
+
+### Software Requirements
+
+- Raspberry Pi (any model) or Linux system
+- Node.js 18 or higher
+- Git
+
 ## Installation Steps
 
 ### 1. System Preparation
