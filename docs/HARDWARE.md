@@ -274,11 +274,17 @@ sense = SenseHat()
 # Display text
 sense.show_message("WiFi Scan", text_colour=[0, 255, 0])
 
-# Show icons
-sense.set_pixels(wifi_icon)  # Custom 8x8 icon
+# Show icons (64-element list for 8x8 display)
+wifi_icon = [
+    0,0,0,0,0,0,0,0,
+    0,0,1,1,1,1,0,0,
+    0,1,0,0,0,0,1,0,
+    # ... define your 8x8 pattern
+]
+sense.set_pixels(wifi_icon)
 
 # Set individual pixels
-sense.set_pixel(x, y, r, g, b)
+sense.set_pixel(x, y, r, g, b)  # x,y in range 0-7
 ```
 
 ## 🔧 Assembly Tips
@@ -390,7 +396,7 @@ After assembling hardware, you'll need to:
    sudo apt install hcxtools hcxdumptool
    ```
 
-5. **Start the Web Interface**
+6. **Start the Web Interface**
    ```bash
    # If you ran 'npm link', use:
    chippin server start
@@ -404,7 +410,7 @@ After assembling hardware, you'll need to:
    # Or use IP address: http://192.168.x.x:3000
    ```
 
-6. **Access from Your Device**
+7. **Access from Your Device**
    - Connect smartphone/laptop to same WiFi as Pi
    - Open web browser
    - Navigate to `http://chippin.local:3000`
