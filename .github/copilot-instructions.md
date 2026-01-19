@@ -11,7 +11,7 @@ All development tasks are managed through npm scripts.
 ### Core Development Commands
 
 ```bash
-# Upgrade all dependencies
+# Update dependencies to compatible versions
 npm run upgrade
 
 # Format code
