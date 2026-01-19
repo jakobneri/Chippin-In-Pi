@@ -2,7 +2,7 @@
 
 ## Repository Structure
 
-This is a monorepo for the Chippin-In-Pi project.
+This is a monorepo for the Chippin.In-Pi project.
 
 ## Development Commands
 
