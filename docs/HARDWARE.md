@@ -8,57 +8,61 @@ This guide provides a comprehensive shopping list with prices from German retail
 
 - **Portable**: Battery-powered for on-the-go use
 - **Wireless**: Bluetooth, WiFi, and RF capabilities
-- **Compact**: Small form factor
+- **Compact**: Small form factor, headless operation
 - **Budget-friendly**: Affordable options with premium alternatives
+- **Web-based Interface**: Control via locally hosted webpage, no display needed
 
 ## 📋 Complete Shopping List
 
 ### Core Components
 
-#### Option 1: Budget-Friendly Setup (~€120-150)
+#### Option 1: Budget-Friendly Setup (~€75-100)
 
-| Component | Model | Price (€) | Retailer | Link |
-|-----------|-------|-----------|----------|------|
+| Component | Model | Price (€) | Retailer | Notes |
+|-----------|-------|-----------|----------|-------|
 | **Raspberry Pi** | Raspberry Pi Zero 2 W | €18-22 | BerryBase, Reichelt | Built-in WiFi/BT |
 | **SD Card** | SanDisk Ultra 32GB Class 10 | €8-10 | Amazon.de, MediaMarkt | - |
 | **Power Bank** | Anker PowerCore 10000mAh | €20-25 | Amazon.de | Compact, USB-C |
-| **Display** | Waveshare 2.13" E-Paper HAT | €20-25 | BerryBase, Amazon.de | Low power |
+| **LED Array** | WS2812B LED Strip (8 LEDs) | €3-5 | Amazon.de, BerryBase | Status indicators |
 | **Case** | Official Pi Zero Case | €5-8 | BerryBase, Reichelt | - |
 | **USB Hub** | Ugreen USB Hub 4-Port | €12-15 | Amazon.de | For peripherals |
 | **Cables** | USB-C & Micro-USB cables | €8-12 | Amazon.de | Various adapters |
 | **Accessories** | GPIO headers, heatsinks | €5-10 | BerryBase | - |
 
-**Total: ~€96-127**
+**Total: ~€79-107**
+**Interface**: Web-based (connect via WiFi)
 
-#### Option 2: Performance Setup (~€180-250)
+#### Option 2: Performance Setup (~€160-210)
 
-| Component | Model | Price (€) | Retailer | Link |
-|-----------|-------|-----------|----------|------|
+| Component | Model | Price (€) | Retailer | Notes |
+|-----------|-------|-----------|----------|-------|
 | **Raspberry Pi** | Raspberry Pi 4B (4GB) | €60-70 | BerryBase, Reichelt | Better performance |
 | **SD Card** | Samsung PRO Plus 64GB | €15-20 | Amazon.de, MediaMarkt | Faster speeds |
 | **Power Bank** | RAVPower 20000mAh PD | €35-45 | Amazon.de | USB-C PD, high capacity |
-| **Display** | 3.5" Touch LCD HAT | €25-35 | BerryBase, Amazon.de | Touch interface |
+| **LED Array** | NeoPixel 8 LED Stick | €5-8 | Amazon.de, BerryBase | RGB status display |
 | **Case** | Flirc Raspberry Pi 4 Case | €18-25 | Amazon.de | Aluminum, passive cooling |
 | **USB Hub** | Anker 7-Port USB 3.0 Hub | €25-35 | Amazon.de | Powered hub |
 | **Cables** | Premium USB-C cables | €12-18 | Amazon.de | - |
 | **Accessories** | GPIO headers, fans | €8-15 | BerryBase | - |
 
-**Total: ~€198-263**
+**Total: ~€178-236**
+**Interface**: Web-based (connect via WiFi)
 
-#### Option 3: Premium Portable Setup (~€250-350)
+#### Option 3: Premium Portable Setup (~€260-350)
 
-| Component | Model | Price (€) | Retailer | Link |
-|-----------|-------|-----------|----------|------|
+| Component | Model | Price (€) | Retailer | Notes |
+|-----------|-------|-----------|----------|-------|
 | **Raspberry Pi** | Raspberry Pi 5 (8GB) | €90-110 | BerryBase, Reichelt | Latest model |
 | **SD Card** | Samsung PRO Endurance 128GB | €25-35 | Amazon.de | High endurance |
 | **Power Supply** | Official Pi 5 27W USB-C PSU | €12-15 | BerryBase | Required for Pi 5 |
 | **Battery** | PiSugar 3 Plus | €65-80 | Amazon.de, AliExpress | UPS functionality |
-| **Display** | 5" Touch DSI Display | €65-85 | BerryBase | Official DSI connection |
+| **LED Array** | Pimoroni Blinkt! (8 RGB LEDs) | €6-10 | Pimoroni, BerryBase | Status indicators |
 | **Case** | Argon NEO 5 M.2 Case | €35-45 | Amazon.de | M.2 SSD support |
 | **Storage** | 256GB M.2 NVMe SSD | €25-35 | Amazon.de | Fast storage |
 | **Accessories** | Premium GPIO kit | €15-25 | BerryBase | - |
 
-**Total: ~€332-430**
+**Total: ~€273-365**
+**Interface**: Web-based (connect via WiFi)
 
 ### Wireless & RF Modules
 
@@ -79,13 +83,15 @@ These modules extend wireless capabilities for security testing:
 
 | Item | Price (€) | Retailer | Purpose |
 |------|-----------|----------|---------|
+| WS2812B LED strip (8-16 LEDs) | €3-8 | Amazon.de, BerryBase | Status indicators |
+| NeoPixel LED stick | €5-10 | Adafruit, BerryBase | RGB status display |
+| Pimoroni Blinkt! (8 RGB LEDs) | €6-10 | Pimoroni, BerryBase | Pre-soldered status LEDs |
+| Individual LEDs (red/green/blue) | €2-5 | Amazon.de, Reichelt | Simple status indicators |
 | Jumper wires (120pcs) | €5-8 | Amazon.de, BerryBase | GPIO connections |
 | Breadboard | €5-10 | Amazon.de, Reichelt | Prototyping |
 | USB WiFi adapter | €10-20 | Amazon.de | Additional interface |
 | USB Bluetooth adapter | €8-15 | Amazon.de | External BT |
 | GPIO breakout board | €8-15 | BerryBase | Easier access |
-| Portable keyboard | €15-30 | Amazon.de | Input device |
-| Mini HDMI cable | €8-12 | Amazon.de | External display |
 | Heat sinks set | €5-10 | Amazon.de | Cooling |
 | Active cooling fan | €8-15 | BerryBase | Pi 4/5 cooling |
 
@@ -132,27 +138,28 @@ These modules extend wireless capabilities for security testing:
 
 ## 💡 Recommended Build Configurations
 
-### Configuration A: "The Scout" - Ultra Portable (€150-180)
+### Configuration A: "The Scout" - Ultra Portable (€120-140)
 
-**Perfect for**: Walking around, quick tests, minimal setup
+**Perfect for**: Walking around, quick tests, minimal setup, headless operation
 
 - Raspberry Pi Zero 2 W
-- Waveshare 2.13" E-Paper display
+- WS2812B LED strip (8 LEDs) for status codes
 - Anker PowerCore 10000mAh
 - Samsung 64GB SD card
 - RTL-SDR v3
 - NRF24L01+ module
 - Compact case with GPIO access
 
-**Pros**: Very portable, long battery life, silent operation
-**Cons**: Limited processing power, small display
+**Interface**: Web-based dashboard (access via smartphone/laptop WiFi)
+**Pros**: Very portable, long battery life, completely headless, silent operation
+**Cons**: Limited processing power, requires another device for control
 
-### Configuration B: "The Analyst" - Balanced (€250-300)
+### Configuration B: "The Analyst" - Balanced (€220-260)
 
-**Perfect for**: Field work, extended sessions, multi-tasking
+**Perfect for**: Field work, extended sessions, multi-tasking, headless operation
 
 - Raspberry Pi 4B (4GB)
-- 3.5" Touch LCD
+- NeoPixel 8 LED Stick for RGB status display
 - RAVPower 20000mAh
 - Samsung PRO 64GB SD card
 - Alfa AWUS036ACH WiFi adapter
@@ -160,25 +167,83 @@ These modules extend wireless capabilities for security testing:
 - CC1101 module
 - Flirc case
 
-**Pros**: Good performance, touchscreen, long runtime
-**Cons**: Larger footprint than Zero
+**Interface**: Web-based dashboard (access via smartphone/laptop/tablet WiFi)
+**Pros**: Good performance, RGB status indicators, long runtime, headless
+**Cons**: Larger footprint than Zero, requires another device for control
 
-### Configuration C: "The Powerhouse" - Maximum Capability (€450-550)
+### Configuration C: "The Powerhouse" - Maximum Capability (€380-480)
 
-**Perfect for**: Serious research, heavy processing, full toolkit
+**Perfect for**: Serious research, heavy processing, full toolkit, headless operation
 
 - Raspberry Pi 5 (8GB)
-- 5" DSI touchscreen
+- Pimoroni Blinkt! (8 RGB LEDs) for status display
 - PiSugar 3 Plus battery
 - 256GB NVMe SSD
 - HackRF One
 - Ubertooth One
 - Alfa AWUS036ACH
 - Argon NEO case
-- Portable keyboard
 
-**Pros**: Maximum power, professional tools, NVMe speed
-**Cons**: Higher cost, bulkier setup
+**Interface**: Web-based dashboard (access via any device with web browser)
+**Pros**: Maximum power, professional tools, NVMe speed, RGB status, headless
+**Cons**: Higher cost, bulkier setup, requires another device for control
+
+## 🌐 Web-Based Interface & LED Status
+
+### Accessing the Device
+
+The Chippin-In-Pi runs in **headless mode** (no display required). All control is done through a locally hosted web interface:
+
+1. **Connect to Pi's WiFi**
+   - The Pi creates its own WiFi hotspot (or connects to your network)
+   - Connect your smartphone, laptop, or tablet to the Pi's network
+
+2. **Access Web Dashboard**
+   - Open a web browser on your device
+   - Navigate to `http://chippin.local:3000` or `http://192.168.x.x:3000`
+   - Use the web interface to control all security tools
+
+3. **Mobile-First Design**
+   - Responsive web interface works on any device
+   - Perfect for smartphone control while portable
+   - No need for keyboard or mouse
+
+### LED Status Codes
+
+The LED array provides visual feedback without needing to check the web interface:
+
+#### Common Status Patterns
+
+| LED Pattern | Meaning |
+|-------------|---------|
+| **Solid Green** | System ready, idle |
+| **Pulsing Blue** | WiFi/network activity |
+| **Blinking Yellow** | Tool running/scanning |
+| **Solid Red** | Error or critical alert |
+| **Rainbow** | Boot sequence/initialization |
+| **Alternating LEDs** | Data transfer in progress |
+| **Quick Flash** | Command received |
+
+#### LED Hardware Options
+
+- **WS2812B Strip**: Cheapest option, requires soldering, fully programmable RGB
+- **NeoPixel Stick**: Easy to use, pre-soldered headers, RGB
+- **Pimoroni Blinkt!**: Premium option, HAT format, library support
+- **Individual LEDs**: Simplest option, separate red/green/blue LEDs
+
+### GPIO Pin Connections for LEDs
+
+```
+WS2812B/NeoPixel:
+- Data Pin: GPIO 18 (Pin 12)
+- 5V Power: Pin 2 or 4
+- Ground: Pin 6, 9, 14, 20, 25, 30, 34, 39
+
+Individual LEDs (with 220Ω resistors):
+- Status LED 1 (Green): GPIO 17 (Pin 11)
+- Status LED 2 (Yellow): GPIO 27 (Pin 13)
+- Status LED 3 (Red): GPIO 22 (Pin 15)
+```
 
 ## 🔧 Assembly Tips
 
@@ -189,10 +254,11 @@ These modules extend wireless capabilities for security testing:
    - Insert SD card with OS
    - Attach GPIO headers if needed
 
-2. **Install Display**
-   - Connect HAT display to GPIO
-   - Or use DSI connector for official displays
-   - Secure with standoffs
+2. **Install LED Status Array**
+   - Connect WS2812B/NeoPixel to GPIO 18 (Pin 12)
+   - Or wire individual LEDs to GPIO 17, 27, 22
+   - Use 220Ω resistors for individual LEDs
+   - Secure LEDs to case or front panel
 
 3. **Power Setup**
    - Choose appropriate power bank
@@ -206,6 +272,7 @@ These modules extend wireless capabilities for security testing:
 
 5. **Case Integration**
    - Ensure proper ventilation
+   - LED visibility from front/top
    - GPIO access for modules
    - Consider custom 3D printed cases
 
@@ -217,17 +284,18 @@ These modules extend wireless capabilities for security testing:
 | Pi 4B (4GB) | 3W | 7W | ~4-5 hours |
 | Pi 5 (8GB) | 4W | 10W | ~3-4 hours |
 
-*Add 1-3W for display and 2-5W for RF modules*
+*Add 0.5-1W for LED array and 2-5W for RF modules*
 
 ## 📱 Software Setup
 
 After assembling hardware, you'll need to:
 
-1. **Install Raspberry Pi OS**
+1. **Install Raspberry Pi OS (Lite)**
    ```bash
    # Download Raspberry Pi Imager
-   # Flash OS to SD card
+   # Flash Raspberry Pi OS Lite (no desktop needed for headless)
    # Enable SSH and WiFi during setup
+   # Set hostname to "chippin" for easy access
    ```
 
 2. **Install Chippin-In-Pi**
@@ -238,9 +306,25 @@ After assembling hardware, you'll need to:
    ```
 
 3. **Configure Hardware**
-   - Enable SPI/I2C in raspi-config
-   - Install drivers for displays
-   - Set up RF module software
+   - Enable SPI/I2C in raspi-config (for LED arrays and sensors)
+   - Install LED control libraries (rpi-ws281x-native for WS2812B)
+   - Set up RF module software (rtl-sdr, hackrf, etc.)
+
+4. **Start the Web Interface**
+   ```bash
+   # Start the Chippin-In-Pi server
+   chippin server start
+   
+   # Server runs on port 3000
+   # Access from another device: http://chippin.local:3000
+   # Or use IP address: http://192.168.x.x:3000
+   ```
+
+5. **Access from Your Device**
+   - Connect smartphone/laptop to same WiFi as Pi
+   - Open web browser
+   - Navigate to `http://chippin.local:3000`
+   - Control all tools from the web dashboard
 
 ## 🔒 Security Considerations
 
@@ -283,10 +367,12 @@ If you need help with hardware selection or compatibility:
 
 Start small and expand:
 
-1. **Beginner**: Pi Zero + basic modules (€100-150)
-2. **Intermediate**: Add RTL-SDR and better display (€50-100)
+1. **Beginner**: Pi Zero + LED array + basic modules (€80-120)
+2. **Intermediate**: Add RTL-SDR and RGB LED status (€50-80)
 3. **Advanced**: Upgrade to Pi 4/5 with professional tools (€200-300)
 4. **Professional**: Complete toolkit with HackRF, Ubertooth (€300-500)
+
+**Note**: All configurations are headless - control via web interface from your smartphone or laptop!
 
 ---
 
