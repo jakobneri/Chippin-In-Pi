@@ -106,6 +106,25 @@ These modules extend wireless capabilities for security testing:
 | **CC1101** | Sub-1GHz transceiver | €5-12 | Amazon.de, eBay | 315/433/868/915MHz |
 | **ESP32 Module** | WiFi/BT development | €8-15 | Amazon.de, BerryBase | Dual-mode, programmable |
 
+#### WiFi/Wireless HATs for Raspberry Pi
+
+**Note**: WiFi HATs provide additional wireless connectivity but **cannot replace** USB WiFi adapters for penetration testing due to driver and monitor mode limitations.
+
+| HAT | Purpose | Price (€) | Retailer | Capabilities |
+|-----|---------|-----------|----------|--------------|
+| **Waveshare SX1262 LoRa HAT** | Long-range wireless | €20-30 | Amazon.de, BerryBase | LoRa 868MHz, GPIO-based |
+| **Waveshare ESP32-C3 HAT** | WiFi/BLE expansion | €12-18 | Amazon.de, Waveshare | AT commands, UART control |
+| **Adafruit AirLift FeatherWing** | WiFi co-processor | €15-25 | Adafruit (ships to DE) | ESP32-based, SPI interface |
+| **PiJuice HAT** | UPS + connectivity | €45-55 | Amazon.de, Pimoroni | Battery + optional WiFi module |
+
+**Why WiFi HATs are NOT suitable for pentesting:**
+- GPIO/UART/SPI WiFi HATs lack direct kernel driver access needed for monitor mode
+- No packet injection support (requires specific chipsets + kernel drivers)
+- Limited to station/AP mode only
+- Best used for: Additional connectivity, IoT projects, LoRa communication
+
+**For WiFi Pineapple capabilities, always use USB WiFi adapters (Alfa recommended)**
+
 ### Additional Accessories
 
 | Item | Price (€) | Retailer | Purpose |
@@ -178,39 +197,41 @@ These modules extend wireless capabilities for security testing:
 **Pros**: Ultra-compact, excellent WiFi pentesting, very portable, Sense HAT provides 64 LEDs for rich status display
 **Cons**: Single WiFi adapter, limited to 1-2 USB devices at once
 
-### Configuration B: "Compact Multi-Tool" - Balanced (€170-231)
+### Configuration B: "WiFi HAT Multi-Tool" - Balanced (€155-216)
 
-**Perfect for**: WiFi + RF testing, compact, versatile
+**Perfect for**: WiFi + RF testing with integrated WiFi HAT, compact, versatile
 
-- **Raspberry Pi Sense HAT** (8x8 LED matrix) - €30-40
+- **Waveshare SX1262 LoRa HAT** or **ESP32 WiFi HAT** - €15-25 - **GPIO-based wireless**
+- **Simple LED indicators** (3x LEDs: red/yellow/green) - €2-5
 - Anker PowerCore 20000mAh PD - €35-45
 - Samsung PRO 64GB SD card - €12-18
 - **Alfa AWUS036ACHM** WiFi adapter - €55-70 - **Dual-band, superior monitor mode**
 - **RTL-SDR v3** - €30-40 - **Software Defined Radio**
 - Compact case - €8-18
 
-**Setup**: Rotate between WiFi adapter and RTL-SDR as needed (Pi 5 has multiple USB ports)
+**Setup**: WiFi HAT for additional wireless capabilities, Alfa adapter for pentesting
 **Interface**: Web-based dashboard (access via smartphone/laptop/tablet WiFi)
-**Pros**: Compact yet versatile, Sense HAT 8x8 display, WiFi + SDR capabilities
-**Cons**: Can't use both WiFi adapter and SDR simultaneously without careful port management
+**Pros**: Integrated WiFi HAT, versatile, WiFi + SDR + LoRa capabilities, simple LED status
+**Cons**: WiFi HATs limited to basic operations (not suitable for monitor mode/injection)
 
-### Configuration C: "Compact Premium" - Advanced (€293-383)
+**Note**: WiFi HATs like ESP32-based or Waveshare modules provide additional wireless connectivity but **cannot replace** dedicated USB WiFi adapters (like Alfa) for penetration testing due to driver and monitor mode limitations.
 
-**Perfect for**: Professional WiFi testing with UPS, maximum portability
+### Configuration C: "Premium Dual-WiFi" - Advanced (€278-368)
 
-- **Raspberry Pi Sense HAT** (8x8 LED matrix) - €30-40
+**Perfect for**: Professional WiFi testing with dual adapters, maximum capability
+
+- **NeoPixel 8 LED Stick** or **Pimoroni Blinkt!** - €5-10 - **RGB status display**
 - **PiSugar 3 Plus** battery (UPS functionality) - €65-80
 - Samsung PRO Endurance 64GB SD card - €15-20
-- **Alfa AWUS036ACHM** WiFi adapter - €55-70 - **Dual-band, superior monitor mode**
+- **Two Alfa AWUS036ACH** WiFi adapters - €90-120 - **Dual-interface attacks**
 - **Ubertooth One** - €120-150 - **Bluetooth Low Energy sniffing**
 - PiSugar compatible compact case - €8-23
+- Small 2-port USB-C hub - €8-12 - **For simultaneous devices**
 
-**Setup**: Ultra-compact with integrated UPS, swap between Ubertooth and WiFi adapter as needed
+**Setup**: Dual WiFi adapters for MITM attacks, one for AP mode, one for monitor mode
 **Interface**: Web-based dashboard (access via any device with web browser)
-**Pros**: Integrated UPS for true portability, Sense HAT 8x8 matrix, professional WiFi & BLE testing, very compact
-**Cons**: Can only use one USB tool at a time (WiFi OR Bluetooth), higher initial cost
-
-**Note**: If you need simultaneous WiFi + Bluetooth, consider a small 2-port powered USB-C hub (€8-12)
+**Pros**: Dual WiFi adapters enable advanced attacks, integrated UPS, professional BLE testing, flexible LED display
+**Cons**: Higher cost, requires compact USB hub for all devices simultaneously
 
 ## 🌐 Web-Based Interface & LED Status
 
@@ -232,19 +253,21 @@ The Chippin-In-Pi runs in **headless mode** (no display required). All control i
    - Perfect for smartphone control while portable
    - No need for keyboard or mouse
 
-### LED Status Codes
+### LED Status Display Options
 
-The **Raspberry Pi Sense HAT** provides an 8x8 LED matrix (64 RGB LEDs) for rich visual feedback without needing to check the web interface:
+Depending on your configuration, you can use different LED displays for visual feedback:
 
-#### Sense HAT Status Display Capabilities
+#### Option 1: Raspberry Pi Sense HAT (Configuration A)
 
-The 8x8 LED matrix allows for:
+The **Raspberry Pi Sense HAT** provides an 8x8 LED matrix (64 RGB LEDs) for rich visual feedback:
+
+**Capabilities:**
 - **Text scrolling**: Display status messages, IP addresses, tool names
 - **Icons and symbols**: WiFi signal strength, battery level, attack type
 - **Color-coded zones**: Different quadrants for different statuses
 - **Animations**: Progress bars, loading indicators, activity patterns
 
-#### Common Status Patterns
+**Common Status Patterns:**
 
 | LED Pattern | Meaning |
 |-------------|---------|
@@ -254,18 +277,15 @@ The 8x8 LED matrix allows for:
 | **Red X or warning** | Error or critical alert |
 | **Rainbow sweep** | Boot sequence/initialization |
 | **Scrolling text** | Tool name or status message |
-| **Pulsing center** | Command received/processing |
 
-#### Sense HAT Features
-
-The Raspberry Pi Sense HAT includes:
+**Sense HAT Features:**
 - **8x8 RGB LED matrix** - 64 individually addressable LEDs
 - **5-button joystick** - Optional local control (up/down/left/right/center)
 - **Environmental sensors** - Temperature, humidity, pressure (useful for field work)
 - **Motion sensors** - Gyroscope, accelerometer, magnetometer
 - **Easy mounting** - Direct GPIO connection, no wiring needed
 
-#### Python Library Support
+**Python Library Support:**
 
 ```python
 from sense_hat import SenseHat
@@ -287,6 +307,58 @@ sense.set_pixels(wifi_icon)
 sense.set_pixel(x, y, r, g, b)  # x,y in range 0-7
 ```
 
+#### Option 2: Simple LED Indicators (Configuration B)
+
+For a minimalist setup with WiFi HATs, use **3 basic LEDs**:
+
+**Components:**
+- 3x LEDs (red, yellow, green) - €2-5
+- 3x 220Ω resistors
+- Jumper wires
+
+**GPIO Connections:**
+- Green LED: GPIO 17 (Pin 11) - System ready
+- Yellow LED: GPIO 27 (Pin 13) - Activity/scanning
+- Red LED: GPIO 22 (Pin 15) - Error/alert
+
+**Status Patterns:**
+- Green solid: System idle, ready
+- Yellow blinking: WiFi scanning/tool active
+- Red solid: Error condition
+- All off: System booting/shutdown
+
+**Python Control:**
+```python
+import RPi.GPIO as GPIO
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(17, GPIO.OUT)  # Green
+GPIO.setup(27, GPIO.OUT)  # Yellow
+GPIO.setup(22, GPIO.OUT)  # Red
+
+# Turn on green LED
+GPIO.output(17, GPIO.HIGH)
+```
+
+#### Option 3: RGB LED Stick (Configuration C)
+
+For compact RGB status display, use **NeoPixel or Blinkt!**:
+
+**Options:**
+- **NeoPixel 8 LED Stick** (€5-10) - Adafruit compatible, 8 RGB LEDs
+- **Pimoroni Blinkt!** (€6-10) - HAT format, 8 RGB LEDs, easier to mount
+
+**Features:**
+- 8 individually addressable RGB LEDs
+- Single GPIO pin control (GPIO 18)
+- Python library support (rpi-ws281x or blinkt)
+- Compact form factor
+
+**Status Display:**
+- Each LED can show different status (network, power, activity, etc.)
+- Color-coded feedback (green=good, yellow=warning, red=error)
+- Animation support for scanning/loading
+
 ## 🔧 Assembly Tips
 
 ### Basic Assembly Steps
@@ -295,26 +367,47 @@ sense.set_pixel(x, y, r, g, b)  # x,y in range 0-7
    - Install heat sinks on CPU/RAM (optional for compact build)
    - Insert SD card with OS (32-64GB sufficient)
 
-2. **Install Sense HAT**
+2. **Install LED Display (depends on configuration)**
+   
+   **For Sense HAT (Config A):**
    - Align Sense HAT GPIO pins with Pi 5 GPIO header
    - Press down firmly to ensure good connection
    - Secure with standoffs (usually included with Sense HAT)
    - No wiring needed - direct GPIO connection
 
-3. **Power Setup**
+   **For Simple LEDs (Config B):**
+   - Connect LEDs with 220Ω resistors to GPIO 17, 27, 22
+   - Use jumper wires from GPIO pins to breadboard
+   - Connect LED cathodes (short leg) to ground
+
+   **For RGB LED Stick (Config C):**
+   - NeoPixel: Connect to GPIO 18, 5V power, and ground
+   - Blinkt!: Mounts directly on GPIO header (pins 1-40)
+
+3. **Install WiFi HAT (if using Config B)**
+   - Align HAT with GPIO pins (Waveshare SX1262 or ESP32 HAT)
+   - Ensure no GPIO conflict with LED connections
+   - Secure with standoffs
+
+4. **Power Setup**
    - For maximum compactness: Use compact power bank (10000-20000mAh)
    - For UPS functionality: Use PiSugar 3 Plus (integrated solution)
    - Use short USB-C cables (15-30cm) to minimize bulk
 
-4. **Add WiFi Adapter (compact setup)**
-   - Plug Alfa WiFi adapter directly into Pi 5 USB port
-   - No hub needed for single adapter + Sense HAT setup
-   - Pi 5 has enough power for Sense HAT + 1 WiFi adapter
+4. **Power Setup**
+   - For maximum compactness: Use compact power bank (10000-20000mAh)
+   - For UPS functionality: Use PiSugar 3 Plus (integrated solution)
+   - Use short USB-C cables (15-30cm) to minimize bulk
 
-5. **Case Integration**
-   - Choose compact case compatible with Sense HAT
-   - Ensure Sense HAT LED matrix is visible through case top
-   - Some cases have transparent tops or cutouts for Sense HAT
+5. **Add WiFi Adapter (compact setup)**
+   - Plug Alfa WiFi adapter directly into Pi 5 USB port
+   - No hub needed for single adapter + LED display setup
+   - Config C: Use small USB-C hub (€8-12) for dual WiFi adapters + Ubertooth
+
+6. **Case Integration**
+   - **Config A (Sense HAT)**: Choose case compatible with Sense HAT, ensure LED matrix visibility
+   - **Config B (WiFi HAT)**: Case must accommodate WiFi HAT and simple LEDs
+   - **Config C (Dual WiFi)**: Compact case with USB-C hub space
    - Maintain proper ventilation for passive cooling
 
 ### Compact Setup Notes
