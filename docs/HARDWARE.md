@@ -163,47 +163,47 @@ These modules extend wireless capabilities for security testing:
 
 **Note**: These configurations assume you're using your Raspberry Pi 5 with **ultra-compact** design (no USB hubs).
 
-### Configuration A: "Compact WiFi Pentester" - Budget (€90-135)
+### Configuration A: "Compact WiFi Pentester" - Budget (€104-141)
 
 **Perfect for**: WiFi security testing, portable, minimal footprint
 
-- **Raspberry Pi Sense HAT** (8x8 LED matrix) - €35
-- Anker PowerCore 10000mAh PD
-- Samsung 32GB SD card
-- **Alfa AWUS036ACH** WiFi adapter (~€50) - **Essential for WiFi Pineapple-style attacks**
-- Compact cables
+- **Raspberry Pi Sense HAT** (8x8 LED matrix) - €30-40
+- Anker PowerCore 10000mAh PD - €20-28
+- Samsung 32GB SD card - €6-8
+- **Alfa AWUS036ACH** WiFi adapter - €45-60 - **Essential for WiFi Pineapple-style attacks**
+- Compact cables - €3-5
 
 **Setup**: WiFi adapter plugs directly into Pi 5 USB port (no hub needed)
 **Interface**: Web-based dashboard (access via smartphone/laptop WiFi)
 **Pros**: Ultra-compact, excellent WiFi pentesting, very portable, Sense HAT provides 64 LEDs for rich status display
 **Cons**: Single WiFi adapter, limited to 1-2 USB devices at once
 
-### Configuration B: "Compact Multi-Tool" - Balanced (€180-250)
+### Configuration B: "Compact Multi-Tool" - Balanced (€170-231)
 
 **Perfect for**: WiFi + RF testing, compact, versatile
 
-- **Raspberry Pi Sense HAT** (8x8 LED matrix) - €35
-- Anker PowerCore 20000mAh PD
-- Samsung PRO 64GB SD card
-- **Alfa AWUS036ACHM** WiFi adapter (~€60) - **Dual-band, superior monitor mode**
-- **RTL-SDR v3** (~€35) - **Software Defined Radio**
-- Compact case
+- **Raspberry Pi Sense HAT** (8x8 LED matrix) - €30-40
+- Anker PowerCore 20000mAh PD - €35-45
+- Samsung PRO 64GB SD card - €12-18
+- **Alfa AWUS036ACHM** WiFi adapter - €55-70 - **Dual-band, superior monitor mode**
+- **RTL-SDR v3** - €30-40 - **Software Defined Radio**
+- Compact case - €8-18
 
 **Setup**: Rotate between WiFi adapter and RTL-SDR as needed (Pi 5 has multiple USB ports)
 **Interface**: Web-based dashboard (access via smartphone/laptop/tablet WiFi)
 **Pros**: Compact yet versatile, Sense HAT 8x8 display, WiFi + SDR capabilities
 **Cons**: Can't use both WiFi adapter and SDR simultaneously without careful port management
 
-### Configuration C: "Compact Premium" - Advanced (€280-350)
+### Configuration C: "Compact Premium" - Advanced (€293-383)
 
 **Perfect for**: Professional WiFi testing with UPS, maximum portability
 
-- **Raspberry Pi Sense HAT** (8x8 LED matrix) - €35
-- **PiSugar 3 Plus** battery (UPS functionality) - €70
-- Samsung PRO Endurance 64GB SD card
-- **Alfa AWUS036ACHM** WiFi adapter (~€60) - **Dual-band, superior monitor mode**
-- **Ubertooth One** (~€135) - **Bluetooth Low Energy sniffing**
-- PiSugar compatible compact case
+- **Raspberry Pi Sense HAT** (8x8 LED matrix) - €30-40
+- **PiSugar 3 Plus** battery (UPS functionality) - €65-80
+- Samsung PRO Endurance 64GB SD card - €15-20
+- **Alfa AWUS036ACHM** WiFi adapter - €55-70 - **Dual-band, superior monitor mode**
+- **Ubertooth One** - €120-150 - **Bluetooth Low Energy sniffing**
+- PiSugar compatible compact case - €8-23
 
 **Setup**: Ultra-compact with integrated UPS, swap between Ubertooth and WiFi adapter as needed
 **Interface**: Web-based dashboard (access via any device with web browser)
@@ -334,6 +334,13 @@ sense.set_pixel(x, y, r, g, b)  # x,y in range 0-7
 | Pi 5 + Sense HAT + WiFi adapter | 5W | 11W | ~3 hours | ~6 hours |
 | Pi 5 + Sense HAT + WiFi + RTL-SDR | 7W | 13W | ~2.5 hours | ~5 hours |
 
+**Note on Runtime Calculations:**  
+*These are ideal estimates. Real-world runtimes are typically 15-25% lower due to:*
+- *USB-C power bank efficiency (~80-85%)*
+- *DC-DC conversion losses*
+- *Variable PD voltage negotiation (5V, 9V, 12V, 20V)*
+- *Battery degradation and ambient temperature*
+
 *Sense HAT adds ~0.5W, WiFi adapters add 1-3W, RTL-SDR adds 2W*
 
 ## 📱 Software Setup
@@ -347,6 +354,8 @@ After assembling hardware, you'll need to:
    # Enable SSH and WiFi during setup
    # Set hostname to "chippin" in Imager advanced options (Ctrl+Shift+X)
    #   or later via 'sudo raspi-config' -> System Options -> Hostname
+   # Note: Using hostname "chippin" allows access at http://chippin.local
+   #       (used in web interface instructions below)
    ```
 
 2. **Install Chippin-In-Pi**
@@ -464,9 +473,10 @@ sudo apt install bettercap
 # Install Aircrack-ng suite (already installed in step 4)
 sudo apt install aircrack-ng
 
-# Install Kismet (modern method)
+# Install Kismet (modern method - auto-detect OS version)
+CODENAME=$(. /etc/os-release 2>/dev/null && echo "$VERSION_CODENAME" || echo "bookworm")
 wget -O - https://www.kismetwireless.net/repos/kismet-release.gpg.key | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/kismet.gpg
-echo 'deb https://www.kismetwireless.net/repos/apt/release/bullseye bullseye main' | sudo tee /etc/apt/sources.list.d/kismet.list
+echo "deb https://www.kismetwireless.net/repos/apt/release/${CODENAME} ${CODENAME} main" | sudo tee /etc/apt/sources.list.d/kismet.list
 sudo apt update
 sudo apt install kismet
 
@@ -546,10 +556,10 @@ If you need help with hardware selection or compatibility:
 
 **For Raspberry Pi 5 users with compact builds** - Start minimal and expand:
 
-1. **Ultra-Compact Start** (€60-90): Sense HAT + Power bank + 32GB SD card
-2. **WiFi Pentesting** (€110-140): Add Alfa AWUS036ACH WiFi adapter
-3. **Multi-Protocol** (€145-180): Add RTL-SDR v3 for SDR capabilities
-4. **Premium Compact** (€210-280): Upgrade to PiSugar UPS + Ubertooth One for Bluetooth
+1. **Ultra-Compact Start**: Sense HAT (€30-40) + Power bank (€20-28) + 32GB SD (€6-8) = €56-76
+2. **WiFi Pentesting**: Add Alfa AWUS036ACH (€45-60) = €101-136 total
+3. **Multi-Protocol**: Add RTL-SDR v3 (€30-40) = €131-176 total
+4. **Premium Compact**: Upgrade to PiSugar UPS (€65-80) + Ubertooth One (€120-150) = €296-406 total
 
 **Note**: All configurations are ultra-compact and headless - control via web interface!
 **Compact Philosophy**: No USB hubs, minimal cables, integrated components like Sense HAT
