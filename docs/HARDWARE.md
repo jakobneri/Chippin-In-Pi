@@ -4,6 +4,8 @@
 
 This guide provides a comprehensive shopping list with prices from German retailers to transform your Raspberry Pi into a portable hacking and security testing device with Bluetooth, WiFi, and other wireless capabilities.
 
+**Note**: This list assumes you already have a Raspberry Pi 5. Components are listed for adding to your existing Pi.
+
 ## 🎯 Project Goals
 
 - **Portable**: Battery-powered for on-the-go use
@@ -14,70 +16,97 @@ This guide provides a comprehensive shopping list with prices from German retail
 
 ## 📋 Complete Shopping List
 
-### Core Components
+### Core Components (for Raspberry Pi 5)
 
-#### Option 1: Budget-Friendly Setup (~€80-110)
+#### Option 1: Budget-Friendly Setup (~€60-90)
 
 | Component | Model | Price (€) | Retailer | Notes |
 |-----------|-------|-----------|----------|-------|
-| **Raspberry Pi** | Raspberry Pi Zero 2 W | €18-22 | BerryBase, Reichelt | Built-in WiFi/BT |
-| **SD Card** | SanDisk Ultra 32GB Class 10 | €8-10 | Amazon.de, MediaMarkt | - |
-| **Power Bank** | Anker PowerCore 10000mAh | €20-25 | Amazon.de | Compact, USB-C |
+| **SD Card** | SanDisk Ultra 64GB Class 10 | €10-12 | Amazon.de, MediaMarkt | For Pi 5 |
+| **Power Bank** | Anker PowerCore 20000mAh PD | €35-45 | Amazon.de | USB-C PD for Pi 5 |
 | **LED Array** | WS2812B LED Strip (8 LEDs) | €3-5 | Amazon.de, BerryBase | Status indicators |
-| **Case** | Official Pi Zero Case | €5-8 | BerryBase, Reichelt | - |
 | **USB Hub** | Ugreen USB Hub 4-Port | €12-15 | Amazon.de | For peripherals |
-| **Cables** | USB-C & Micro-USB cables | €8-12 | Amazon.de | Various adapters |
+| **Cables** | USB-C cables | €5-8 | Amazon.de | Various adapters |
 | **Accessories** | GPIO headers, heatsinks | €5-10 | BerryBase | - |
 
-**Total: ~€79-107**
+**Total: ~€70-95**
 **Interface**: Web-based (connect via WiFi)
 
-#### Option 2: Performance Setup (~€180-240)
+#### Option 2: Balanced Setup (~€115-150)
 
 | Component | Model | Price (€) | Retailer | Notes |
 |-----------|-------|-----------|----------|-------|
-| **Raspberry Pi** | Raspberry Pi 4B (4GB) | €60-70 | BerryBase, Reichelt | Better performance |
-| **SD Card** | Samsung PRO Plus 64GB | €15-20 | Amazon.de, MediaMarkt | Faster speeds |
-| **Power Bank** | RAVPower 20000mAh PD | €35-45 | Amazon.de | USB-C PD, high capacity |
+| **SD Card** | Samsung PRO Plus 128GB | €18-25 | Amazon.de, MediaMarkt | High-speed |
+| **Power Bank** | RAVPower 26800mAh PD 30W | €45-60 | Amazon.de | Extended runtime |
 | **LED Array** | NeoPixel 8 LED Stick | €5-8 | Amazon.de, BerryBase | RGB status display |
-| **Case** | Flirc Raspberry Pi 4 Case | €18-25 | Amazon.de | Aluminum, passive cooling |
+| **Case** | Argon NEO 5 Case | €25-35 | Amazon.de | Aluminum, good cooling |
 | **USB Hub** | Anker 7-Port USB 3.0 Hub | €25-35 | Amazon.de | Powered hub |
-| **Cables** | Premium USB-C cables | €12-18 | Amazon.de | - |
-| **Accessories** | GPIO headers, fans | €8-15 | BerryBase | - |
+| **Cables** | Premium USB-C cables | €8-12 | Amazon.de | - |
+| **Accessories** | Active cooling fan | €8-15 | BerryBase | For Pi 5 |
 
-**Total: ~€178-236**
+**Total: ~€134-190**
 **Interface**: Web-based (connect via WiFi)
 
-#### Option 3: Premium Portable Setup (~€275-365)
+#### Option 3: Premium Setup with Storage (~€180-250)
 
 | Component | Model | Price (€) | Retailer | Notes |
 |-----------|-------|-----------|----------|-------|
-| **Raspberry Pi** | Raspberry Pi 5 (8GB) | €90-110 | BerryBase, Reichelt | Latest model |
-| **SD Card** | Samsung PRO Endurance 128GB | €25-35 | Amazon.de | High endurance |
+| **SD Card** | Samsung PRO Endurance 256GB | €35-45 | Amazon.de | Maximum endurance |
 | **Power Supply** | Official Pi 5 27W USB-C PSU | €12-15 | BerryBase | Required for Pi 5 |
 | **Battery** | PiSugar 3 Plus | €65-80 | Amazon.de, AliExpress | UPS functionality |
 | **LED Array** | Pimoroni Blinkt! (8 RGB LEDs) | €6-10 | Pimoroni, BerryBase | Status indicators |
 | **Case** | Argon NEO 5 M.2 Case | €35-45 | Amazon.de | M.2 SSD support |
-| **Storage** | 256GB M.2 NVMe SSD | €25-35 | Amazon.de | Fast storage |
-| **Accessories** | Premium GPIO kit | €15-25 | BerryBase | - |
+| **Storage** | 512GB M.2 NVMe SSD | €35-50 | Amazon.de | Fast storage |
+| **USB Hub** | Powered 7-Port USB 3.0 Hub | €25-35 | Amazon.de | - |
+| **Accessories** | Premium GPIO kit, cooling | €15-25 | BerryBase | - |
 
-**Total: ~€273-365**
+**Total: ~€228-305**
 **Interface**: Web-based (connect via WiFi)
 
 ### Wireless & RF Modules
 
 These modules extend wireless capabilities for security testing:
 
+#### WiFi Adapters for Penetration Testing (WiFi Pineapple-style)
+
+**Essential for packet injection, monitor mode, and WiFi attacks:**
+
+| Module | Chipset | Price (€) | Retailer | Capabilities |
+|--------|---------|-----------|----------|--------------|
+| **Alfa AWUS036ACH** | Realtek RTL8812AU | €45-60 | Amazon.de | Dual-band, monitor mode, packet injection |
+| **Alfa AWUS036ACHM** | MediaTek MT7612U | €55-70 | Amazon.de | Better monitor mode, dual-band |
+| **Alfa AWUS036ACM** | MediaTek MT7612U | €50-65 | Amazon.de | Long-range, monitor mode |
+| **TP-Link TL-WN722N v1** | Atheros AR9271 | €15-25 | eBay.de | Budget option, monitor mode (v1 only!) |
+| **Panda PAU09 N600** | Ralink RT5572 | €25-35 | Amazon.de | Dual-band, good compatibility |
+| **WiFi Pineapple Nano** | Complete kit | €100-120 | Hak5 (ships to DE) | Ready-to-use pentest platform |
+| **WiFi Pineapple Mark VII** | Complete kit | €200-250 | Hak5 (ships to DE) | Professional WiFi auditing |
+
+**Recommended for Pi 5**: Alfa AWUS036ACH or AWUS036ACHM (excellent Linux support, powerful)
+
+#### Bluetooth Modules for Security Testing
+
+| Module | Purpose | Price (€) | Retailer | Capabilities |
+|--------|---------|-----------|----------|--------------|
+| **Ubertooth One** | Bluetooth sniffing/analysis | €120-150 | Great Scott Gadgets | BLE/Bluetooth monitoring |
+| **Bluetooth CSR 4.0 USB** | Basic BT adapter | €8-15 | Amazon.de | External BT for testing |
+| **nRF52840 Dongle** | BLE development | €10-15 | Amazon.de, Mouser | Packet sniffing, jamming |
+| **CrazyRadio PA** | 2.4GHz research | €30-40 | Bitcraze | Nordic nRF24 protocol |
+
+#### Software Defined Radio (SDR)
+
 | Module | Purpose | Price (€) | Retailer | Notes |
 |--------|---------|-----------|----------|-------|
 | **RTL-SDR v3** | Software Defined Radio | €30-40 | Amazon.de | Frequency reception |
 | **HackRF One** | Full-duplex SDR | €300-350 | Passion Radio | TX/RX capability |
+| **Yard Stick One** | Sub-1GHz RF | €100-120 | Great Scott Gadgets | 300-928MHz |
+
+#### Other RF Modules
+
+| Module | Purpose | Price (€) | Retailer | Notes |
+|--------|---------|-----------|----------|-------|
 | **NRF24L01+** | 2.4GHz transceiver | €3-8 | Amazon.de, eBay | Cheap RF module |
 | **CC1101** | Sub-1GHz transceiver | €5-12 | Amazon.de, eBay | 315/433/868/915MHz |
-| **ESP32 Module** | Additional WiFi/BT | €8-15 | Amazon.de, BerryBase | Dual-mode |
-| **Alfa AWUS036ACH** | High-power WiFi adapter | €45-60 | Amazon.de | Monitor mode |
-| **Ubertooth One** | Bluetooth analyzer | €120-150 | Hacker Warehouse | BT sniffing |
-| **Yard Stick One** | Sub-1GHz RF | €100-120 | Great Scott Gadgets | 300-928MHz |
+| **ESP32 Module** | WiFi/BT development | €8-15 | Amazon.de, BerryBase | Dual-mode, programmable |
 
 ### Additional Accessories
 
@@ -138,55 +167,61 @@ These modules extend wireless capabilities for security testing:
 
 ## 💡 Recommended Build Configurations
 
-### Configuration A: "The Scout" - Ultra Portable (€110-145)
+**Note**: These configurations assume you're using your Raspberry Pi 5.
 
-**Perfect for**: Walking around, quick tests, minimal setup, headless operation
+### Configuration A: "WiFi Pentester" - Budget Setup (€120-165)
 
-- Raspberry Pi Zero 2 W
+**Perfect for**: WiFi security testing, packet injection, monitor mode attacks
+
 - WS2812B LED strip (8 LEDs) for status codes
-- Anker PowerCore 10000mAh
+- Anker PowerCore 20000mAh PD
 - Samsung 64GB SD card
+- **Alfa AWUS036ACH** WiFi adapter (~€50) - **Essential for WiFi Pineapple-style attacks**
 - RTL-SDR v3 (~€35)
 - NRF24L01+ module (~€5)
-- Compact case with GPIO access
+- USB Hub (4-port)
 
 **Interface**: Web-based dashboard (access via smartphone/laptop WiFi)
-**Pros**: Very portable, long battery life, completely headless, silent operation
-**Cons**: Limited processing power, requires another device for control
+**Pros**: Excellent WiFi pentesting, portable, good battery life
+**Cons**: Single WiFi adapter (consider adding second for dual-interface attacks)
 
-### Configuration B: "The Analyst" - Balanced (€240-295)
+### Configuration B: "WiFi Pineapple Pro" - Advanced (€280-380)
 
-**Perfect for**: Field work, extended sessions, multi-tasking, headless operation
+**Perfect for**: Professional WiFi auditing, dual-band attacks, BLE testing
 
-- Raspberry Pi 4B (4GB)
 - NeoPixel 8 LED Stick for RGB status display
-- RAVPower 20000mAh
-- Samsung PRO 64GB SD card
-- Alfa AWUS036ACH WiFi adapter (~€50)
+- RAVPower 26800mAh PD 30W
+- Samsung PRO 128GB SD card
+- **Alfa AWUS036ACHM** WiFi adapter (~€60) - **Dual-band, superior monitor mode**
+- **Second Alfa AWUS036ACH** (~€50) - **For dual-interface attacks**
+- **Ubertooth One** (~€135) - **Bluetooth Low Energy sniffing**
 - RTL-SDR v3 (~€35)
 - CC1101 module (~€8)
-- Flirc case
+- Argon NEO 5 case
+- Powered USB hub (7-port)
 
 **Interface**: Web-based dashboard (access via smartphone/laptop/tablet WiFi)
-**Pros**: Good performance, RGB status indicators, long runtime, headless
-**Cons**: Larger footprint than Zero, requires another device for control
+**Pros**: Dual WiFi adapters for MITM attacks, BLE sniffing, professional setup
+**Cons**: Higher cost, more power consumption with multiple adapters
 
-### Configuration C: "The Powerhouse" - Maximum Capability (€590-715)
+### Configuration C: "Full Spectrum" - Ultimate Capability (€650-850)
 
-**Perfect for**: Serious research, heavy processing, full toolkit, headless operation
+**Perfect for**: Complete wireless security research, SDR, all protocols
 
-- Raspberry Pi 5 (8GB)
 - Pimoroni Blinkt! (8 RGB LEDs) for status display
-- PiSugar 3 Plus battery
-- 256GB NVMe SSD
-- HackRF One (~€325)
-- Ubertooth One (~€135)
-- Alfa AWUS036ACH (~€50)
-- Argon NEO case
+- PiSugar 3 Plus battery (UPS functionality)
+- 512GB NVMe SSD (fast packet storage)
+- **WiFi Pineapple Mark VII** (~€225) - **Professional WiFi auditing platform**
+- **Or: 2x Alfa AWUS036ACHM** (~€120) - **If building custom solution**
+- **HackRF One** (~€325) - **Full-duplex SDR, TX/RX**
+- **Ubertooth One** (~€135) - **Bluetooth analysis**
+- **Yard Stick One** (~€110) - **Sub-1GHz attacks**
+- Argon NEO 5 M.2 case
+- Powered USB hub (7-port)
 
 **Interface**: Web-based dashboard (access via any device with web browser)
-**Pros**: Maximum power, professional tools, NVMe speed, RGB status, headless
-**Cons**: Higher cost, bulkier setup, requires another device for control
+**Pros**: Complete wireless testing toolkit, professional SDR, all frequency ranges
+**Cons**: Expensive, requires significant power, complex setup
 
 ## 🌐 Web-Based Interface & LED Status
 
@@ -313,7 +348,24 @@ After assembling hardware, you'll need to:
 3. **Configure Hardware**
    - Enable SPI/I2C in raspi-config (for LED arrays and sensors)
    - Install LED control libraries (rpi-ws281x-native for WS2812B)
+   - Set up WiFi adapter drivers and monitor mode support
+   - Install wireless security tools (aircrack-ng, hostapd, dnsmasq, etc.)
    - Set up RF module software (rtl-sdr, hackrf, etc.)
+
+4. **WiFi Adapter Setup for Penetration Testing**
+   ```bash
+   # Install wireless tools
+   sudo apt install aircrack-ng hostapd dnsmasq wireshark
+   
+   # Check WiFi adapter monitor mode support
+   sudo airmon-ng
+   
+   # Enable monitor mode on wlan1 (external adapter)
+   sudo airmon-ng start wlan1
+   
+   # For WiFi Pineapple-style attacks, also install:
+   sudo apt install hcxtools hcxdumptool
+   ```
 
 4. **Start the Web Interface**
    ```bash
@@ -335,6 +387,58 @@ After assembling hardware, you'll need to:
    - Navigate to `http://chippin.local:3000`
    - Control all tools from the web dashboard
 
+## 🔐 WiFi Pineapple-Style Capabilities
+
+### What You Can Do
+
+With the right WiFi adapters (like Alfa AWUS036ACH/ACHM), your Pi 5 becomes a powerful WiFi penetration testing platform:
+
+#### Evil Twin Attacks
+- Create fake access points that mimic legitimate networks
+- Capture credentials and monitor traffic
+- Perform MITM (Man-in-the-Middle) attacks
+
+#### Packet Injection
+- Deauthentication attacks
+- Beacon flooding
+- Custom packet crafting
+
+#### Monitor Mode Operations
+- Capture WiFi handshakes (WPA/WPA2)
+- Network reconnaissance
+- Hidden SSID discovery
+- Client probing
+
+#### Recommended Software Stack
+
+```bash
+# WiFi Pineapple alternatives for Raspberry Pi:
+# - Wifiphisher: Automated phishing attacks
+# - Fluxion: WPA/WPA2 security testing
+# - Airgeddon: All-in-one wireless auditing
+# - Bettercap: Swiss army knife for network attacks
+# - Kismet: Wireless network detector
+
+# Install Bettercap (recommended):
+sudo apt install bettercap
+
+# Install Wifiphisher:
+sudo apt install wifiphisher
+
+# Or use Kali Linux for Raspberry Pi (pre-installed tools)
+```
+
+### Dual WiFi Adapter Setup
+
+For advanced attacks, use two WiFi adapters:
+- **Adapter 1 (built-in Pi 5 WiFi)**: Connect to internet/control network
+- **Adapter 2 (Alfa AWUS036ACH)**: Monitor mode, packet injection, AP mode
+
+This allows you to:
+- Run attacks while maintaining internet connection
+- Create evil twin while monitoring real AP
+- Simultaneous dual-band operations
+
 ## 🔒 Security Considerations
 
 ⚠️ **Legal Notice**: Only use these tools on networks and systems you own or have explicit permission to test.
@@ -349,20 +453,33 @@ After assembling hardware, you'll need to:
 ### Communities
 - Raspberry Pi Forums (https://forums.raspberrypi.com)
 - r/raspberry_pi on Reddit
-- Hacker News
+- r/hacking and r/HowToHack on Reddit
+- Hak5 Forums (WiFi Pineapple community)
 - DEF CON groups
 
 ### Learning Resources
-- RTL-SDR.com blog
-- Great Scott Gadgets tutorials
-- Hackaday projects
-- GitHub awesome-raspberry-pi
+- **WiFi Security**:
+  - Aircrack-ng documentation
+  - Wifiphisher GitHub
+  - Fluxion tutorials
+  - WiFi Pineapple University (Hak5)
+- **SDR**:
+  - RTL-SDR.com blog
+  - Great Scott Gadgets tutorials
+  - GNU Radio tutorials
+- **General**:
+  - Hackaday projects
+  - GitHub awesome-raspberry-pi
+  - Kali Linux documentation
 
 ### Software Tools
-- Kali Linux for Raspberry Pi
-- Raspbian with security tools
-- GNU Radio for SDR
-- Wireshark for packet analysis
+- **Kali Linux for Raspberry Pi** - Pre-configured with security tools
+- **Parrot Security OS** - Alternative security-focused OS
+- **Aircrack-ng suite** - WiFi security auditing
+- **Bettercap** - Network attack and monitoring
+- **Wireshark** - Packet analysis
+- **GNU Radio** - SDR software
+- **Kismet** - Wireless network detector
 
 ## 📞 Support
 
@@ -374,12 +491,12 @@ If you need help with hardware selection or compatibility:
 
 ## 🎓 Upgrade Path
 
-Start small and expand:
+**For Raspberry Pi 5 users** - Start with essentials and expand:
 
-1. **Beginner**: Pi Zero + LED array + basic modules (€80-120)
-2. **Intermediate**: Add RTL-SDR and RGB LED status (€50-80)
-3. **Advanced**: Upgrade to Pi 4/5 with professional tools (€200-300)
-4. **Professional**: Complete toolkit with HackRF, Ubertooth (€300-500)
+1. **WiFi Basics** (€60-100): LED array + Power bank + Alfa AWUS036ACH
+2. **WiFi Pro** (€120-180): Add second WiFi adapter + RTL-SDR + Better power solution
+3. **Multi-Protocol** (€250-350): Add Ubertooth One + Yard Stick One + NVMe storage
+4. **Full Spectrum** (€500-800): Add HackRF One + WiFi Pineapple or multiple adapters
 
 **Note**: All configurations are headless - control via web interface from your smartphone or laptop!
 
