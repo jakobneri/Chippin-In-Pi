@@ -49,7 +49,7 @@ This guide provides a comprehensive shopping list with prices from German retail
 #### Option 3: Compact Premium with UPS (~€138-182)
 
 | Component | Model | Price (€) | Retailer | Notes |
-|-----------|-------|----------|-------|-------|
+|-----------|-------|-----------|----------|-------|
 | **SD Card** | Samsung PRO Endurance 64GB | €15-20 | Amazon.de | High endurance |
 | **Power Supply** | Official Pi 5 27W USB-C PSU | €12-15 | BerryBase | For charging |
 | **Battery** | PiSugar 3 Plus | €65-80 | Amazon.de, AliExpress | Compact UPS |
