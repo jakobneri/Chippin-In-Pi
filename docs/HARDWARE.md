@@ -48,7 +48,7 @@ This guide provides a comprehensive shopping list with prices from German retail
 **Total: ~€178-236**
 **Interface**: Web-based (connect via WiFi)
 
-#### Option 3: Premium Portable Setup (~€260-350)
+#### Option 3: Premium Portable Setup (~€270-365)
 
 | Component | Model | Price (€) | Retailer | Notes |
 |-----------|-------|-----------|----------|-------|
@@ -138,7 +138,7 @@ These modules extend wireless capabilities for security testing:
 
 ## 💡 Recommended Build Configurations
 
-### Configuration A: "The Scout" - Ultra Portable (€120-140)
+### Configuration A: "The Scout" - Ultra Portable (€110-145)
 
 **Perfect for**: Walking around, quick tests, minimal setup, headless operation
 
@@ -146,15 +146,15 @@ These modules extend wireless capabilities for security testing:
 - WS2812B LED strip (8 LEDs) for status codes
 - Anker PowerCore 10000mAh
 - Samsung 64GB SD card
-- RTL-SDR v3
-- NRF24L01+ module
+- RTL-SDR v3 (~€35)
+- NRF24L01+ module (~€5)
 - Compact case with GPIO access
 
 **Interface**: Web-based dashboard (access via smartphone/laptop WiFi)
 **Pros**: Very portable, long battery life, completely headless, silent operation
 **Cons**: Limited processing power, requires another device for control
 
-### Configuration B: "The Analyst" - Balanced (€220-260)
+### Configuration B: "The Analyst" - Balanced (€240-295)
 
 **Perfect for**: Field work, extended sessions, multi-tasking, headless operation
 
@@ -162,16 +162,16 @@ These modules extend wireless capabilities for security testing:
 - NeoPixel 8 LED Stick for RGB status display
 - RAVPower 20000mAh
 - Samsung PRO 64GB SD card
-- Alfa AWUS036ACH WiFi adapter
-- RTL-SDR v3
-- CC1101 module
+- Alfa AWUS036ACH WiFi adapter (~€50)
+- RTL-SDR v3 (~€35)
+- CC1101 module (~€8)
 - Flirc case
 
 **Interface**: Web-based dashboard (access via smartphone/laptop/tablet WiFi)
 **Pros**: Good performance, RGB status indicators, long runtime, headless
 **Cons**: Larger footprint than Zero, requires another device for control
 
-### Configuration C: "The Powerhouse" - Maximum Capability (€380-480)
+### Configuration C: "The Powerhouse" - Maximum Capability (€590-715)
 
 **Perfect for**: Serious research, heavy processing, full toolkit, headless operation
 
@@ -179,9 +179,9 @@ These modules extend wireless capabilities for security testing:
 - Pimoroni Blinkt! (8 RGB LEDs) for status display
 - PiSugar 3 Plus battery
 - 256GB NVMe SSD
-- HackRF One
-- Ubertooth One
-- Alfa AWUS036ACH
+- HackRF One (~€325)
+- Ubertooth One (~€135)
+- Alfa AWUS036ACH (~€50)
 - Argon NEO case
 
 **Interface**: Web-based dashboard (access via any device with web browser)
@@ -314,11 +314,14 @@ After assembling hardware, you'll need to:
    ```bash
    # Start the Chippin-In-Pi server
    chippin server start
+   # Or use: node cli/index.js server start
    
    # Server runs on port 3000
    # Access from another device: http://chippin.local:3000
    # Or use IP address: http://192.168.x.x:3000
    ```
+   
+   *Note: The `chippin` command is available after running `npm link` during installation.*
 
 5. **Access from Your Device**
    - Connect smartphone/laptop to same WiFi as Pi
