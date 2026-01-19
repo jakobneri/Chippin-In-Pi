@@ -18,50 +18,48 @@ This guide provides a comprehensive shopping list with prices from German retail
 
 ### Core Components (for Raspberry Pi 5)
 
-#### Option 1: Budget-Friendly Setup (~€70-95)
+#### Option 1: Ultra-Compact Budget Setup (~€55-75)
 
 | Component | Model | Price (€) | Retailer | Notes |
 |-----------|-------|-----------|----------|-------|
-| **SD Card** | SanDisk Ultra 64GB Class 10 | €10-12 | Amazon.de, MediaMarkt | For Pi 5 |
-| **Power Bank** | Anker PowerCore 20000mAh PD | €35-45 | Amazon.de | USB-C PD for Pi 5 |
-| **LED Array** | WS2812B LED Strip (8 LEDs) | €3-5 | Amazon.de, BerryBase | Status indicators |
-| **USB Hub** | Ugreen USB Hub 4-Port | €12-15 | Amazon.de | For peripherals |
-| **Cables** | USB-C cables | €5-8 | Amazon.de | Various adapters |
-| **Accessories** | GPIO headers, heatsinks | €5-10 | BerryBase | - |
+| **SD Card** | SanDisk Ultra 32GB Class 10 | €6-8 | Amazon.de, MediaMarkt | Sufficient for OS + tools |
+| **Power Bank** | Anker PowerCore 10000mAh PD | €20-28 | Amazon.de | Compact, USB-C PD |
+| **LED Array** | Raspberry Pi Sense HAT | €30-40 | BerryBase, Pimoroni | 8x8 LED matrix + sensors |
+| **Cables** | Short USB-C cable | €3-5 | Amazon.de | Compact cables |
 
-**Total: ~€70-95**
+**Total: ~€59-81**
 **Interface**: Web-based (connect via WiFi)
+**Compact Factor**: No USB hub needed - use Pi 5's built-in ports
 
-#### Option 2: Balanced Setup (~€134-190)
+#### Option 2: Compact Performance Setup (~€110-145)
 
 | Component | Model | Price (€) | Retailer | Notes |
 |-----------|-------|-----------|----------|-------|
-| **SD Card** | Samsung PRO Plus 128GB | €18-25 | Amazon.de, MediaMarkt | High-speed |
-| **Power Bank** | RAVPower 26800mAh PD 30W | €45-60 | Amazon.de | Extended runtime |
-| **LED Array** | NeoPixel 8 LED Stick | €5-8 | Amazon.de, BerryBase | RGB status display |
-| **Case** | Argon NEO 5 Case | €25-35 | Amazon.de | Aluminum, good cooling |
-| **USB Hub** | Anker 7-Port USB 3.0 Hub | €25-35 | Amazon.de | Powered hub |
-| **Cables** | Premium USB-C cables | €8-12 | Amazon.de | - |
-| **Accessories** | Active cooling fan | €8-15 | BerryBase | For Pi 5 |
+| **SD Card** | Samsung PRO Plus 64GB | €12-18 | Amazon.de, MediaMarkt | Faster speeds |
+| **Power Bank** | Anker PowerCore 20000mAh PD | €35-45 | Amazon.de | Good runtime |
+| **LED Array** | Raspberry Pi Sense HAT | €30-40 | BerryBase, Pimoroni | 8x8 LED matrix + sensors |
+| **Case** | Official Pi 5 Case | €8-12 | BerryBase, Reichelt | Compact protection |
+| **Cables** | Premium USB-C cables | €5-8 | Amazon.de | - |
+| **Accessories** | Heatsinks, thermal pads | €8-12 | BerryBase | Passive cooling |
 
-**Total: ~€134-190**
+**Total: ~€98-135**
 **Interface**: Web-based (connect via WiFi)
+**Compact Factor**: No USB hub - direct WiFi adapter connection to Pi 5 ports
 
-#### Option 3: Premium Setup with Storage (~€228-305)
+#### Option 3: Compact Premium with UPS (~€150-200)
 
 | Component | Model | Price (€) | Retailer | Notes |
-|-----------|-------|-----------|----------|-------|
-| **SD Card** | Samsung PRO Endurance 256GB | €35-45 | Amazon.de | Maximum endurance |
-| **Power Supply** | Official Pi 5 27W USB-C PSU | €12-15 | BerryBase | Required for Pi 5 |
-| **Battery** | PiSugar 3 Plus | €65-80 | Amazon.de, AliExpress | UPS functionality |
-| **LED Array** | Pimoroni Blinkt! (8 RGB LEDs) | €6-10 | Pimoroni, BerryBase | Status indicators |
-| **Case** | Argon NEO 5 M.2 Case | €35-45 | Amazon.de | M.2 SSD support |
-| **Storage** | 512GB M.2 NVMe SSD | €35-50 | Amazon.de | Fast storage |
-| **USB Hub** | Powered 7-Port USB 3.0 Hub | €25-35 | Amazon.de | - |
-| **Accessories** | Premium GPIO kit, cooling | €15-25 | BerryBase | - |
+|-----------|-------|----------|-------|-------|
+| **SD Card** | Samsung PRO Endurance 64GB | €15-20 | Amazon.de | High endurance |
+| **Power Supply** | Official Pi 5 27W USB-C PSU | €12-15 | BerryBase | For charging |
+| **Battery** | PiSugar 3 Plus | €65-80 | Amazon.de, AliExpress | Compact UPS |
+| **LED Array** | Raspberry Pi Sense HAT | €30-40 | BerryBase, Pimoroni | 8x8 LED matrix + sensors |
+| **Case** | PiSugar Compatible Case | €8-15 | Amazon.de | Compact with UPS |
+| **Accessories** | Thermal management | €8-12 | BerryBase | Heatsinks |
 
-**Total: ~€228-305**
+**Total: ~€138-182**
 **Interface**: Web-based (connect via WiFi)
+**Compact Factor**: Integrated UPS, no external power bank needed
 
 ### Wireless & RF Modules
 
@@ -112,17 +110,13 @@ These modules extend wireless capabilities for security testing:
 
 | Item | Price (€) | Retailer | Purpose |
 |------|-----------|----------|---------|
-| WS2812B LED strip (8-16 LEDs) | €3-8 | Amazon.de, BerryBase | Status indicators |
-| NeoPixel LED stick | €5-10 | Adafruit, BerryBase | RGB status display |
-| Pimoroni Blinkt! (8 RGB LEDs) | €6-10 | Pimoroni, BerryBase | Pre-soldered status LEDs |
-| Individual LEDs (red/green/blue) | €2-5 | Amazon.de, Reichelt | Simple status indicators |
-| Jumper wires (120pcs) | €5-8 | Amazon.de, BerryBase | GPIO connections |
-| Breadboard | €5-10 | Amazon.de, Reichelt | Prototyping |
-| USB WiFi adapter | €10-20 | Amazon.de | Additional interface |
-| USB Bluetooth adapter | €8-15 | Amazon.de | External BT |
-| GPIO breakout board | €8-15 | BerryBase | Easier access |
-| Heat sinks set | €5-10 | Amazon.de | Cooling |
-| Active cooling fan | €8-15 | BerryBase | Pi 4/5 cooling |
+| **Raspberry Pi Sense HAT** | €30-40 | BerryBase, Pimoroni | 8x8 LED matrix, sensors (recommended) |
+| Jumper wires (40pcs) | €3-5 | Amazon.de, BerryBase | GPIO connections |
+| Compact USB-C cables (15cm) | €5-8 | Amazon.de | Space-saving cables |
+| USB WiFi adapter (compact) | €10-20 | Amazon.de | Additional interface |
+| USB Bluetooth adapter (nano) | €8-12 | Amazon.de | External BT (if needed) |
+| Heat sinks set | €5-10 | Amazon.de | Passive cooling |
+| Low-profile heatsink case | €10-15 | Amazon.de | Compact thermal solution |
 
 ## 🛍️ German Retailers
 
@@ -167,61 +161,56 @@ These modules extend wireless capabilities for security testing:
 
 ## 💡 Recommended Build Configurations
 
-**Note**: These configurations assume you're using your Raspberry Pi 5.
+**Note**: These configurations assume you're using your Raspberry Pi 5 with **ultra-compact** design (no USB hubs).
 
-### Configuration A: "WiFi Pentester" - Budget Setup (€120-165)
+### Configuration A: "Compact WiFi Pentester" - Budget (€90-135)
 
-**Perfect for**: WiFi security testing, packet injection, monitor mode attacks
+**Perfect for**: WiFi security testing, portable, minimal footprint
 
-- WS2812B LED strip (8 LEDs) for status codes
-- Anker PowerCore 20000mAh PD
-- Samsung 64GB SD card
+- **Raspberry Pi Sense HAT** (8x8 LED matrix) - €35
+- Anker PowerCore 10000mAh PD
+- Samsung 32GB SD card
 - **Alfa AWUS036ACH** WiFi adapter (~€50) - **Essential for WiFi Pineapple-style attacks**
-- RTL-SDR v3 (~€35)
-- NRF24L01+ module (~€5)
-- USB Hub (4-port)
+- Compact cables
 
+**Setup**: WiFi adapter plugs directly into Pi 5 USB port (no hub needed)
 **Interface**: Web-based dashboard (access via smartphone/laptop WiFi)
-**Pros**: Excellent WiFi pentesting, portable, good battery life
-**Cons**: Single WiFi adapter (consider adding second for dual-interface attacks)
+**Pros**: Ultra-compact, excellent WiFi pentesting, very portable, Sense HAT provides 64 LEDs for rich status display
+**Cons**: Single WiFi adapter, limited to 1-2 USB devices at once
 
-### Configuration B: "WiFi Pineapple Pro" - Advanced (€280-380)
+### Configuration B: "Compact Multi-Tool" - Balanced (€180-250)
 
-**Perfect for**: Professional WiFi auditing, dual-band attacks, BLE testing
+**Perfect for**: WiFi + RF testing, compact, versatile
 
-- NeoPixel 8 LED Stick for RGB status display
-- RAVPower 26800mAh PD 30W
-- Samsung PRO 128GB SD card
+- **Raspberry Pi Sense HAT** (8x8 LED matrix) - €35
+- Anker PowerCore 20000mAh PD
+- Samsung PRO 64GB SD card
 - **Alfa AWUS036ACHM** WiFi adapter (~€60) - **Dual-band, superior monitor mode**
-- **Second Alfa AWUS036ACH** (~€50) - **For dual-interface attacks**
-- **Ubertooth One** (~€135) - **Bluetooth Low Energy sniffing**
-- RTL-SDR v3 (~€35)
-- CC1101 module (~€8)
-- Argon NEO 5 case
-- Powered USB hub (7-port)
+- **RTL-SDR v3** (~€35) - **Software Defined Radio**
+- Compact case
 
+**Setup**: Rotate between WiFi adapter and RTL-SDR as needed (Pi 5 has multiple USB ports)
 **Interface**: Web-based dashboard (access via smartphone/laptop/tablet WiFi)
-**Pros**: Dual WiFi adapters for MITM attacks, BLE sniffing, professional setup
-**Cons**: Higher cost, more power consumption with multiple adapters
+**Pros**: Compact yet versatile, Sense HAT 8x8 display, WiFi + SDR capabilities
+**Cons**: Can't use both WiFi adapter and SDR simultaneously without careful port management
 
-### Configuration C: "Full Spectrum" - Ultimate Capability (€650-850)
+### Configuration C: "Compact Premium" - Advanced (€280-350)
 
-**Perfect for**: Complete wireless security research, SDR, all protocols
+**Perfect for**: Professional WiFi testing with UPS, maximum portability
 
-- Pimoroni Blinkt! (8 RGB LEDs) for status display
-- PiSugar 3 Plus battery (UPS functionality)
-- 512GB NVMe SSD (fast packet storage)
-- **WiFi Pineapple Mark VII** (~€225) - **Professional WiFi auditing platform**
-- **Or: 2x Alfa AWUS036ACHM** (~€110-140) - **If building custom solution**
-- **HackRF One** (~€325) - **Full-duplex SDR, TX/RX**
-- **Ubertooth One** (~€135) - **Bluetooth analysis**
-- **Yard Stick One** (~€110) - **Sub-1GHz attacks**
-- Argon NEO 5 M.2 case
-- Powered USB hub (7-port)
+- **Raspberry Pi Sense HAT** (8x8 LED matrix) - €35
+- **PiSugar 3 Plus** battery (UPS functionality) - €70
+- Samsung PRO Endurance 64GB SD card
+- **Alfa AWUS036ACHM** WiFi adapter (~€60) - **Dual-band, superior monitor mode**
+- **Ubertooth One** (~€135) - **Bluetooth Low Energy sniffing**
+- PiSugar compatible compact case
 
+**Setup**: Ultra-compact with integrated UPS, swap between Ubertooth and WiFi adapter as needed
 **Interface**: Web-based dashboard (access via any device with web browser)
-**Pros**: Complete wireless testing toolkit, professional SDR, all frequency ranges
-**Cons**: Expensive, requires significant power, complex setup
+**Pros**: Integrated UPS for true portability, Sense HAT 8x8 matrix, professional WiFi & BLE testing, very compact
+**Cons**: Can only use one USB tool at a time (WiFi OR Bluetooth), higher initial cost
+
+**Note**: If you need simultaneous WiFi + Bluetooth, consider a small 2-port powered USB-C hub (€8-12)
 
 ## 🌐 Web-Based Interface & LED Status
 
@@ -245,39 +234,51 @@ The Chippin-In-Pi runs in **headless mode** (no display required). All control i
 
 ### LED Status Codes
 
-The LED array provides visual feedback without needing to check the web interface:
+The **Raspberry Pi Sense HAT** provides an 8x8 LED matrix (64 RGB LEDs) for rich visual feedback without needing to check the web interface:
+
+#### Sense HAT Status Display Capabilities
+
+The 8x8 LED matrix allows for:
+- **Text scrolling**: Display status messages, IP addresses, tool names
+- **Icons and symbols**: WiFi signal strength, battery level, attack type
+- **Color-coded zones**: Different quadrants for different statuses
+- **Animations**: Progress bars, loading indicators, activity patterns
 
 #### Common Status Patterns
 
 | LED Pattern | Meaning |
 |-------------|---------|
-| **Solid Green** | System ready, idle |
-| **Pulsing Blue** | WiFi/network activity |
-| **Blinking Yellow** | Tool running/scanning |
-| **Solid Red** | Error or critical alert |
-| **Rainbow** | Boot sequence/initialization |
-| **Alternating LEDs** | Data transfer in progress |
-| **Quick Flash** | Command received |
+| **Green smiley face** | System ready, idle |
+| **Blue WiFi icon** | WiFi/network activity |
+| **Yellow scanning animation** | Tool running/scanning |
+| **Red X or warning** | Error or critical alert |
+| **Rainbow sweep** | Boot sequence/initialization |
+| **Scrolling text** | Tool name or status message |
+| **Pulsing center** | Command received/processing |
 
-#### LED Hardware Options
+#### Sense HAT Features
 
-- **WS2812B Strip**: Cheapest option, requires soldering, fully programmable RGB
-- **NeoPixel Stick**: Easy to use, pre-soldered headers, RGB
-- **Pimoroni Blinkt!**: Premium option, HAT format, library support
-- **Individual LEDs**: Simplest option, separate red/green/blue LEDs
+The Raspberry Pi Sense HAT includes:
+- **8x8 RGB LED matrix** - 64 individually addressable LEDs
+- **5-button joystick** - Optional local control (up/down/left/right/center)
+- **Environmental sensors** - Temperature, humidity, pressure (useful for field work)
+- **Motion sensors** - Gyroscope, accelerometer, magnetometer
+- **Easy mounting** - Direct GPIO connection, no wiring needed
 
-### GPIO Pin Connections for LEDs
+#### Python Library Support
 
-```
-WS2812B/NeoPixel:
-- Data Pin: GPIO 18 (Pin 12)
-- 5V Power: Pin 2 or 4
-- Ground: Pin 6, 9, 14, 20, 25, 30, 34, 39
+```python
+from sense_hat import SenseHat
+sense = SenseHat()
 
-Individual LEDs (with 220Ω resistors):
-- Status LED 1 (Green): GPIO 17 (Pin 11)
-- Status LED 2 (Yellow): GPIO 27 (Pin 13)
-- Status LED 3 (Red): GPIO 22 (Pin 15)
+# Display text
+sense.show_message("WiFi Scan", text_colour=[0, 255, 0])
+
+# Show icons
+sense.set_pixels(wifi_icon)  # Custom 8x8 icon
+
+# Set individual pixels
+sense.set_pixel(x, y, r, g, b)
 ```
 
 ## 🔧 Assembly Tips
@@ -285,41 +286,49 @@ Individual LEDs (with 220Ω resistors):
 ### Basic Assembly Steps
 
 1. **Prepare the Pi**
-   - Install heat sinks on CPU/RAM
-   - Insert SD card with OS
-   - Attach GPIO headers if needed
+   - Install heat sinks on CPU/RAM (optional for compact build)
+   - Insert SD card with OS (32-64GB sufficient)
 
-2. **Install LED Status Array**
-   - Connect WS2812B/NeoPixel to GPIO 18 (Pin 12)
-   - Or wire individual LEDs to GPIO 17, 27, 22
-   - Use 220Ω resistors for individual LEDs
-   - Secure LEDs to case or front panel
+2. **Install Sense HAT**
+   - Align Sense HAT GPIO pins with Pi 5 GPIO header
+   - Press down firmly to ensure good connection
+   - Secure with standoffs (usually included with Sense HAT)
+   - No wiring needed - direct GPIO connection
 
 3. **Power Setup**
-   - Choose appropriate power bank
-   - Use quality USB cables
-   - Consider UPS solutions like PiSugar
+   - For maximum compactness: Use compact power bank (10000-20000mAh)
+   - For UPS functionality: Use PiSugar 3 Plus (integrated solution)
+   - Use short USB-C cables (15-30cm) to minimize bulk
 
-4. **Add RF Modules**
-   - Connect USB-based modules (RTL-SDR, WiFi)
-   - Wire GPIO-based modules (NRF24, CC1101)
-   - Organize cables neatly
+4. **Add WiFi Adapter (compact setup)**
+   - Plug Alfa WiFi adapter directly into Pi 5 USB port
+   - No hub needed for single adapter + Sense HAT setup
+   - Pi 5 has enough power for Sense HAT + 1 WiFi adapter
 
 5. **Case Integration**
-   - Ensure proper ventilation
-   - LED visibility from front/top
-   - GPIO access for modules
-   - Consider custom 3D printed cases
+   - Choose compact case compatible with Sense HAT
+   - Ensure Sense HAT LED matrix is visible through case top
+   - Some cases have transparent tops or cutouts for Sense HAT
+   - Maintain proper ventilation for passive cooling
+
+### Compact Setup Notes
+
+**For Ultra-Compact Builds:**
+- Sense HAT connects directly to GPIO (no cables)
+- Use Pi 5's built-in USB ports (no hub needed for 1-2 devices)
+- Choose compact power bank or integrated UPS (PiSugar)
+- Short cables reduce bulk significantly
+- Optional: Compact 2-port USB-C hub (~€8) if you need WiFi + Bluetooth simultaneously
 
 ### Power Consumption Guide
 
-| Configuration | Idle | Active | Runtime (10000mAh) |
-|---------------|------|--------|--------------------|
-| Pi Zero 2 W | 0.4W | 1.5W | ~18-20 hours |
-| Pi 4B (4GB) | 3W | 7W | ~4-5 hours |
-| Pi 5 (8GB) | 4W | 10W | ~3-4 hours |
+| Configuration | Idle | Active | Runtime (10000mAh) | Runtime (20000mAh) |
+|---------------|------|--------|--------------------|--------------------|
+| Pi 5 + Sense HAT | 4.5W | 8W | ~3.5-4 hours | ~7-8 hours |
+| Pi 5 + Sense HAT + WiFi adapter | 5W | 11W | ~3 hours | ~6 hours |
+| Pi 5 + Sense HAT + WiFi + RTL-SDR | 7W | 13W | ~2.5 hours | ~5 hours |
 
-*Add 0.5-1W for LED array and 2-5W for RF modules*
+*Sense HAT adds ~0.5W, WiFi adapters add 1-3W, RTL-SDR adds 2W*
 
 ## 📱 Software Setup
 
@@ -346,13 +355,28 @@ After assembling hardware, you'll need to:
    ```
 
 3. **Configure Hardware**
-   - Enable SPI/I2C in raspi-config (for LED arrays and sensors)
-   - Install LED control libraries (rpi-ws281x-native for WS2812B)
+   - Enable I2C in raspi-config (required for Sense HAT)
+   - Install Sense HAT library: `sudo apt install sense-hat python3-sense-hat`
    - Set up WiFi adapter drivers and monitor mode support
    - Install wireless security tools (aircrack-ng, hostapd, dnsmasq, etc.)
-   - Set up RF module software (rtl-sdr, hackrf, etc.)
+   - Set up RF module software (rtl-sdr, hackrf, etc.) if using
 
-4. **WiFi Adapter Setup for Penetration Testing**
+4. **Sense HAT Setup**
+   ```bash
+   # Install Sense HAT support
+   sudo apt install sense-hat python3-sense-hat
+   
+   # Enable I2C
+   sudo raspi-config
+   # Navigate to: Interface Options -> I2C -> Enable
+   
+   # Test Sense HAT
+   python3 -c "from sense_hat import SenseHat; s = SenseHat(); s.show_message('Ready!')"
+   
+   # The 8x8 LED matrix is now ready for status display
+   ```
+
+5. **WiFi Adapter Setup for Penetration Testing**
    ```bash
    # Install wireless tools
    sudo apt install aircrack-ng hostapd dnsmasq wireshark
@@ -515,14 +539,15 @@ If you need help with hardware selection or compatibility:
 
 ## 🎓 Upgrade Path
 
-**For Raspberry Pi 5 users** - Start with essentials and expand:
+**For Raspberry Pi 5 users with compact builds** - Start minimal and expand:
 
-1. **WiFi Basics** (€60-100): LED array + Power bank + Alfa AWUS036ACH
-2. **WiFi Pro** (€120-180): Add second WiFi adapter + RTL-SDR + Better power solution
-3. **Multi-Protocol** (€250-350): Add Ubertooth One + Yard Stick One + NVMe storage
-4. **Full Spectrum** (€500-800): Add HackRF One + WiFi Pineapple or multiple adapters
+1. **Ultra-Compact Start** (€60-90): Sense HAT + Power bank + 32GB SD card
+2. **WiFi Pentesting** (€110-140): Add Alfa AWUS036ACH WiFi adapter
+3. **Multi-Protocol** (€145-180): Add RTL-SDR v3 for SDR capabilities
+4. **Premium Compact** (€210-280): Upgrade to PiSugar UPS + Ubertooth One for Bluetooth
 
-**Note**: All configurations are headless - control via web interface from your smartphone or laptop!
+**Note**: All configurations are ultra-compact and headless - control via web interface!
+**Compact Philosophy**: No USB hubs, minimal cables, integrated components like Sense HAT
 
 ---
 
