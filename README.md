@@ -207,11 +207,19 @@ LOG_LEVEL=info
 
 ## Raspberry Pi Setup
 
-### Recommended Hardware
+### Hardware Requirements
 
+📋 **For a complete shopping list with prices and portable setup options**, see [docs/HARDWARE.md](docs/HARDWARE.md)
+
+**Recommended Models:**
+- Raspberry Pi Zero 2 W (compact, portable)
 - Raspberry Pi 4 (4GB+ RAM recommended)
-- Raspberry Pi 400
-- Raspberry Pi 5
+- Raspberry Pi 5 (best performance)
+
+**For Flipper Zero-style portable use:**
+- See the portable configurations in [docs/HARDWARE.md](docs/HARDWARE.md)
+- Includes battery power, WiFi/Bluetooth modules, and compact displays
+- German retailer links with current pricing
 
 ### Installation on Pi
 
@@ -301,6 +309,7 @@ This tool is for educational and authorized security testing purposes only. The 
 ## Support
 
 - 📖 Documentation: [docs/](docs/)
+- 🛒 Hardware Shopping List: [docs/HARDWARE.md](docs/HARDWARE.md)
 - 🐛 Issues: [GitHub Issues](https://github.com/jakobneri/Chippin-In-Pi/issues)
 - 💬 Discussions: [GitHub Discussions](https://github.com/jakobneri/Chippin-In-Pi/discussions)
 
