@@ -32,7 +32,7 @@ This guide provides a comprehensive shopping list with prices from German retail
 **Total: ~€70-95**
 **Interface**: Web-based (connect via WiFi)
 
-#### Option 2: Balanced Setup (~€135-190)
+#### Option 2: Balanced Setup (~€134-190)
 
 | Component | Model | Price (€) | Retailer | Notes |
 |-----------|-------|-----------|----------|-------|
@@ -47,7 +47,7 @@ This guide provides a comprehensive shopping list with prices from German retail
 **Total: ~€134-190**
 **Interface**: Web-based (connect via WiFi)
 
-#### Option 3: Premium Setup with Storage (~€180-250)
+#### Option 3: Premium Setup with Storage (~€228-305)
 
 | Component | Model | Price (€) | Retailer | Notes |
 |-----------|-------|-----------|----------|-------|
@@ -76,7 +76,7 @@ These modules extend wireless capabilities for security testing:
 | **Alfa AWUS036ACH** | Realtek RTL8812AU | €45-60 | Amazon.de | Dual-band, monitor mode, packet injection |
 | **Alfa AWUS036ACHM** | MediaTek MT7612U | €55-70 | Amazon.de | Better monitor mode, dual-band |
 | **Alfa AWUS036ACM** | MediaTek MT7612U | €50-65 | Amazon.de | Long-range, monitor mode |
-| **TP-Link TL-WN722N v1** | Atheros AR9271 | €15-25 | eBay.de | Budget option, monitor mode (v1 only!) |
+| **TP-Link TL-WN722N v1** | Atheros AR9271 | €15-25 | eBay.de | Budget option (v1 ONLY! v2/v3 lack monitor mode) |
 | **Panda PAU09 N600** | Ralink RT5572 | €25-35 | Amazon.de | Dual-band, good compatibility |
 | **WiFi Pineapple Nano** | Complete kit | €100-120 | Hak5 (ships to DE) | Ready-to-use pentest platform |
 | **WiFi Pineapple Mark VII** | Complete kit | €200-250 | Hak5 (ships to DE) | Professional WiFi auditing |
@@ -411,21 +411,24 @@ With the right WiFi adapters (like Alfa AWUS036ACH/ACHM), your Pi 5 becomes a po
 
 #### Recommended Software Stack
 
-```bash
-# WiFi Pineapple alternatives for Raspberry Pi:
-# - Wifiphisher: Automated phishing attacks
-# - Fluxion: WPA/WPA2 security testing
-# - Airgeddon: All-in-one wireless auditing
-# - Bettercap: Swiss army knife for network attacks
-# - Kismet: Wireless network detector
+**WiFi Pineapple alternatives for Raspberry Pi:**
+- **Wifiphisher**: Automated phishing attacks
+- **Fluxion**: WPA/WPA2 security testing
+- **Airgeddon**: All-in-one wireless auditing
+- **Bettercap**: Swiss army knife for network attacks
+- **Kismet**: Wireless network detector
 
-# Install Bettercap (recommended):
+**Installation commands:**
+
+```bash
+# Install Bettercap (recommended)
 sudo apt install bettercap
 
-# Install Wifiphisher:
+# Install Wifiphisher
 sudo apt install wifiphisher
 
-# Or use Kali Linux for Raspberry Pi (pre-installed tools)
+# For complete security toolkit, use Kali Linux for Raspberry Pi
+# (includes all tools pre-installed)
 ```
 
 ### Dual WiFi Adapter Setup
