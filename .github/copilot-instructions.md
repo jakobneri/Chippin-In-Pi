@@ -6,16 +6,13 @@ This is a monorepo for the Chippin-In-Pi project.
 
 ## Development Commands
 
-All development tasks are managed through the **chippin** CLI tool and npm scripts.
+All development tasks are managed through npm scripts.
 
 ### Core Development Commands
 
 ```bash
-# Upgrade all dependencies (except @types/node)
+# Upgrade all dependencies
 npm run upgrade
-
-# Lint code
-npm run lint
 
 # Format code
 npm run format
@@ -23,7 +20,6 @@ npm run format
 
 ## Code Quality
 
-- **Linting**: Use ESLint for code quality
 - **Formatting**: Prettier with plugins for import organization and Tailwind CSS
   - Single quotes, special Angular template parsing for `ng/**/*.html`
 
