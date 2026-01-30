@@ -1,11 +1,11 @@
 {
-  "name": "chippin-in-pi",
+  "name": "pi-music-server",
   "version": "1.0.0",
-  "description": "Raspberry Pi comprehensive hacking and security testing tool",
+  "description": "A powerful music server for Raspberry Pi with web-based control dashboard",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "chippin": "./cli/index.js"
+    "pi-music": "./cli/index.js"
   },
   "scripts": {
     "dev": "node cli/index.js",
@@ -17,15 +17,19 @@
     "build:frontend": "cd frontend && npm run build",
     "lint": "eslint .",
     "format": "prettier --write .",
+    "prepare": "husky install",
     "test": "echo \"Tests not yet implemented\" && exit 0",
     "upgrade": "npm update"
   },
   "keywords": [
     "raspberry-pi",
-    "hacking",
-    "security",
-    "penetration-testing",
-    "cli"
+    "music-server",
+    "audio",
+    "streaming",
+    "youtube-music",
+    "bluetooth",
+    "dac-hat",
+    "web-dashboard"
   ],
   "author": "",
   "license": "MIT",
@@ -39,10 +43,17 @@
     "ora": "^8.1.1",
     "express": "^4.21.2",
     "cors": "^2.8.5",
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.4.7",
+    "speaker": "^1.0.0",
+    "wav": "^1.0.2",
+    "fluent-ffmpeg": "^2.1.3",
+    "bluetoothctl": "^0.6.1",
+    "node-lms": "^1.0.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.9",
-    "prettier": "^3.4.2"
+    "prettier": "^3.4.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10"
   }
 }
